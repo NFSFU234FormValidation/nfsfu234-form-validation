@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.1] - 2023-08-25
+
+### Added
+
+- Website to view all available functions and how to call them. The website is url is [https://nforshifu234dev-nfsfu234-form-validation.netlify.app](https://nforshifu234dev-nfsfu234-form-validation.netlify.app/)
+- `hashPassword(password or any string)` function to hash your password or information from a form before sending it from your form.
+- `Clearer Information for contribution` in the [`CONTRIBUTING.md`](CONTRIBUTING.md)  file
+
 ## [1.1.1] - 2023-08-23
 
 ### Added

@@ -52,8 +52,8 @@ To use the library in your project, there are two ways to include NFSF234 Form V
 If you're looking to employ the form validation library in your browser environment, simply include the following URLs within the `<head>` tag of your HTML code:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/nfsfu234-form-validation@1.1.1/dist/css/nfsfu234dev-form-validation.css">
-<script src="https://unpkg.com/nfsfu234-form-validation@1.1.1/dist/js/nfsfu234Form-validation.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/nfsfu234-form-validation@1.2.1/dist/css/nfsfu234dev-form-validation.css">
+<script src="https://unpkg.com/nfsfu234-form-validation@1.2.1/dist/js/nfsfu234Form-validation.js"></script>
 ```
 
 This way, your browser-based project can readily harness the capabilities of the NFSFU234 Form Validation library. 🌐📦
@@ -600,6 +600,18 @@ const variable = () => { console.log("Hello, world!"); };
 const type = formValidator.checkType(variable); // Returns: 'function'
 ```
 
+### `formValidator.hashPassword(password):Promise`
+The `formValidator.hashPassword()` function is a function tht is used to hash a password or string. It uses the ByCrypt Library to has the string passed.
+
+#### Usage
+```javascript
+formValidator.hashPassword('@Password123')
+    .then( hashedPassword =>{
+        console.log(hashedPassword);
+    })
+    .catch( (error)=>{
+        console.error(error);
+    } );
 
 
 ## Using NFSF234 Form Validation Library in Node.js Application
@@ -643,10 +655,15 @@ Licensed under the MIT License.
 For further insights, dive into the [LICENSE](/LICENSE).
 
 ## Contributing 🚀👋
+### Join the Journey! 🚀👋
 
-Embarking on my very first journey into the realm of open-source libraries, I find myself as the solitary trailblazer. While I tread this novel path, I extend a wholehearted invitation to you for any contributions you might consider lending. Though the current landscape has just me, I firmly believe in the magic of collaboration to yield extraordinary results.
+As I embark on my maiden voyage into the world of open-source libraries, I find myself pioneering this path solo. However, I'm extending a heartfelt invitation to you to be a part of something exciting. Your contribution could be the spark that ignites remarkable outcomes. 
 
-Feeling intrigued and ready to hop on this coding escapade? Don't hesitate to reach out by opening issues or pull requests in the [GitHub repository](https://github.com/nforshifu234dev/nfsfu234-form-validation/). Your input, regardless of the prevailing solo act, holds immeasurable value. Let's learn, grow, and elevate the NFSFU234 Form Validation library together! 🌟🤝
+Intrigued? Ready to dive into this coding adventure? Don't hesitate to reach out by opening issues or pull requests in the [GitHub repository](https://github.com/nforshifu234dev/nfsfu234-form-validation/). Your input, even in this seemingly individual endeavor, holds boundless value.
+
+**Contribute and Elevate**: Join hands with me as we learn, grow, and raise the bar for the NFSFU234 Form Validation library! 🌟🤝
+
+For more details about how to contribute, check out the [CONTRIBUTING.md](CONTRIBUTING.md) file. Your collaborative spirit is greatly appreciated. Together, we can achieve great things!
 
 ## Credits 🙌
 
