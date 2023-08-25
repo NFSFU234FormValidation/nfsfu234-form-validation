@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.0.1] - 2023-08-20
+
+### Added
+- none
+
+### Changed
+
+- Improved the `ajax()` function for a more smoother experience.
+
+### Fixed
+
+- Fixed `ajax()` function to be able to correctly collect the URL from the ajaxOptions parameter or uses the current page URL.
 ## [1.0.0] - 2023-08-15
 🚀 Hello, World! My First Library - NFSFU234 Form Validation Library 📚
 
