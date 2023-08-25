@@ -1,9 +1,12 @@
 # Changelog
 
-## [1.0.1] - 2023-08-20
+## [1.1.1] - 2023-08-23
 
 ### Added
-- none
+
+- `validate()` function for optional validations and more flexibility before submitting a form.
+
+## [1.0.1] - 2023-08-20
 
 ### Changed
 
