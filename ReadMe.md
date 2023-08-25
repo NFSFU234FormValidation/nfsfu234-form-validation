@@ -156,7 +156,7 @@ Here you'll find a compilation of functions available within the NFSFU234 Form V
 | 23 | [`restrictInputLengthWithCounter(inputElement: HTMLInputElement, counterContainer: HTMLElement, options: Object = {})`](#restrictinputlengthwithcounterinputelement-htmlinputelement-countercontainer-htmlelement-options-object) | `formValidator.restrictInputLengthWithCounter('messageField', 100)` | Counts characters in the specified input field, restricts input, and displays a character counter.        | ✅               | ❌                         |
 | 24| [`checkType(variable: any): string`](#checktypevariable-any-string) | `formValidator.checkType('hello')` | Determines the type of a given variable and returns a string representation of the type, or `'unknown'` if type cannot be determined. | ✅ | ✅ |
 | 25 | [getPageUrl():string](#getpageurlstring) | `formValidator.getPageUrl()` | Returns the current page URL | ✅ | ❌ |
-
+| 26 | [formValidator.hashPassword(password):Promise](#formvalidatorhashpasswordpasswordpromise) | `formValidator.hashPassword('1234-efrgty').then((response)=>{ console.log(response) });` | Returns the promise which has the hashed password | ✅ | ✅ |
 
 
 
