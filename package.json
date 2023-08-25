@@ -1,6 +1,6 @@
 {
   "name": "nfsfu234-form-validation",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "NFSFU234 Form Validation is a lightweight and user-friendly JavaScript library designed for validating HTML form elements, with a special emphasis on textarea fields. It offers customizable validation messages, comprehensive support for required field checks, seamless inline error displays, and convenient modal error notifications.",
   "main": "dist\\js\\nfsfu234FormValidation.js",
   "directories": {
@@ -54,5 +54,11 @@
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "stream-browserify": "^3.0.0"
   }
 }

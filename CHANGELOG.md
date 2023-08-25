@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.3] - 2023-08-25
+
+### Fixed
+
+-   Fixed the `bcrypt is not defined` issue from both browser and node environments.
+
 ## [1.2.2] - 2023-08-25
 
 ### Fixed
