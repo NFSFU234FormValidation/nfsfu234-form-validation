@@ -1,0 +1,45 @@
+# Ignoring Node.js related files
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Ignoring editor-specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignoring local environment files
+.env
+
+# Ignoring dependency lock files
+package-lock.json
+yarn.lock
+
+# Ignoring log files
+*.log
+
+# Ignoring OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignoring compiled output
+*.min.js
+*.min.css
+
+# Ignoring cache directories
+.cache/
+
+# Ignoring configuration files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# Ignoring generated files and folders
+coverage/
+*.tsbuildinfo
+
+# Ignoring sensitive or private information
+secrets.json
