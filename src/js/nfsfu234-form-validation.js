@@ -850,6 +850,26 @@
         }
 
         /**
+         * Validates a form using custom error messages and optional inline error display.
+         *
+         * @param {HTMLElement} form - The form element to be validated.
+         * @param {Object} customErrorMessages - Custom error messages for validation failures.
+         * @param {boolean} [isErrorInline=true] - Whether to display errors inline.
+         * @returns {boolean} - Returns true if the form is valid, otherwise false.
+         */
+        validate(form, customErrorMessages, isErrorInline = true) {
+            // If 'form' parameter is not provided, use the internal form reference '_form'
+            form = form ? form : this._form;
+
+            // Call the internal '_validateForm' function to perform validation
+            if (this._validateForm(form, customErrorMessages, isErrorInline)) {
+                return true; // Form is valid
+            }
+
+            return false; // Form validation failed
+        }
+
+        /**
          * Submit Form with Validation and Optional AJAX
          *
          * This public method is used to submit a form with validation and optional AJAX handling.
