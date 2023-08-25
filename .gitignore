@@ -23,10 +23,6 @@ yarn.lock
 .DS_Store
 Thumbs.db
 
-# Ignoring compiled output
-*.min.js
-*.min.css
-
 # Ignoring cache directories
 .cache/
 
