@@ -132,29 +132,32 @@ Here you'll find a compilation of functions available within the NFSFU234 Form V
 | S/N | Function Name                       | How to Call                                            | Description                                                                                                 | Browser Supported | Console Supported (Node.js) |
 |----|------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|-------------------|-----------------------------|
 | 1  | [`submit()`](#submit)            | `formValidator.submit()`                       | Validates and submits a form.                                                                 | ✅               | ❌                         |
-| 2  | [`ajax(AJAXOptions: Object): Promise`](#ajaxajaxoptions-object-promise)            | `formValidator.ajax(AJAXOptions)`     | Makes an AJAX request using the provided options and returns a Promise with the server's response.                           | ✅               | ✅                          |
-| 3  | [`getAJAXResponse(): Promise \| false`](#getajaxresponse-promise--false)            | `formValidator.getAJAXResponse();`     | Retrieves the response from the last AJAX request made using the `ajax` function. It returns a Promise if available, or false if the AJAX request has been resolved.                          | ✅               | ✅                          |
-| 4  | [`generateRandomPassword(): string`](#generaterandompassword-string) | `formValidator.generateRandomPassword(12, true)` | Generates a random password with the specified length and optional inclusion of special characters. | ✅ | ✅ |
-| 5  | [`checkPassword(password: string, shouldIncludeSymbol: bool): boolean`](#checkpasswordpassword-string-shouldincludesymbol-bool-boolean) | `formValidator.checkPassword('StrongP@ssword123', true)` | Checks the strength of the provided password against criteria like minimum length, character types, and optional symbol inclusion. | ✅ | ✅ |
-| 6  | [`isEmail(email: string): boolean`](#isemailemail-string-boolean)   | `formValidator.isEmail('example@example.com')`         | Checks if the given email is in a valid email format.                          | ✅               | ✅                         |
-| 7  | [`isURL(url: string): boolean`](#isurlurl-string-boolean)       | `formValidator.isURL('https://www.example.com')`       | Checks if the given string is a valid URL.                                    | ✅               | ✅                         |
-| 8  | [`isZipcode(zipcode: string): boolean`](#iszipcodezipcode-string-boolean) | `formValidator.isZipcode('12345')`                      | Checks if the given string is a valid ZIP code.                               | ✅               | ✅                         |
-| 9  | [`containsOnlyIntegers(inputValue: string): boolean`](#containsonlyintegersinputvalue-string-boolean) | `formValidator.containsOnlyIntegers('12345')`     | Checks if the given input value contains only integers.                      | ✅               | ✅                         |
-| 10 | [`countString(inputValue: string): number`](#countstringinputvalue-string-number) | `formValidator.countString('Hello, World!')`     | Counts the number of characters in the provided input value.                      | ✅               | ✅                         |
-| 11 | [`togglePasswordVisibility(icons: Object, form: HTMLFormElement or string)`](#togglepasswordvisibilityform-htmlformelement-or-string-icons-object) | `formValidator.togglePasswordVisibility({ 'show': '👁️', 'hide': '🙈' }, 'myForm');` | Enables password visibility toggle for password input fields within a form. | ✅               | ❌                         |
-| 12 | [`validateInput(input: HTMLInputElement or string): boolean`](#validateinputinput-htmlinputelement--string-boolean) | `formValidator.validateInput('usernameField')`     | Validates an input field with the specified ID or HTML input element.  | ✅               | ❌                         |
-| 13 | [`validateAllInput(): boolean`](#validateallinput-boolean)       | `formValidator.validateAllInput()`                    | Validates all input fields within the form. | ✅               | ❌                         |
-| 14 | [`validateSelect(select: HTMLSelectElement or string): boolean`](#validateselectselect-htmlselectelement--string-boolean) | `formValidator.validateSelect('countrySelect')`    | Validates a select field with the specified ID or HTML select element.   | ✅               | ❌                         |
-| 15 | [`validateAllSelect(): boolean`](#validateallselect-boolean)      | `formValidator.validateAllSelect()`                   | Validates all select fields within the form. | ✅               | ❌                         |
-| 16 | [`validateTextarea(textarea: HTMLTextAreaElement or string): boolean`](#validateselectselect-htmlselectelement--string-boolean) | `formValidator.validateTextarea('messageTextarea')` | Validates a textarea field with the specified ID or HTML textarea element.| ✅               | ❌                         |
-| 17 | [`validateAllTextarea(): boolean`](#validatealltextarea-boolean)    | `formValidator.validateAllTextarea()`                 | Validates all textarea fields within the form. | ✅               | ❌                         |
-| 18 | [`validateCheckbox(checkbox: HTMLInputElement or string): boolean`](#validateallcheckbox-boolean) | `formValidator.validateCheckbox('agreeCheckbox')`  | Validates a checkbox field with the specified ID or HTML checkbox element.  | ✅               | ❌                         |
-| 19 | [`validateAllCheckbox(): boolean`](#validateallcheckbox-boolean)    | `formValidator.validateAllCheckbox()`                 | Validates all checkbox fields within the form. | ✅               | ❌                         |
-| 20 | [`validateRadio(radioName: string): boolean`](#validateradioradioname-string-boolean) | `formValidator.validateRadio('genderRadio')`       | Validates a radio button group with the specified name. | ✅               | ❌                         |
-| 21 | [`validateAllRadio(): boolean`](#validateallradio-boolean)       | `formValidator.validateAllRadio()`                    | Validates all radio button groups within the form. | ✅               | ❌                         |
-| 22 | [`restrictInputLengthWithCounter(inputElement: HTMLInputElement, counterContainer: HTMLElement, options: Object = {})`](#restrictinputlengthwithcounterinputelement-htmlinputelement-countercontainer-htmlelement-options-object) | `formValidator.restrictInputLengthWithCounter('messageField', 100)` | Counts characters in the specified input field, restricts input, and displays a character counter.        | ✅               | ❌                         |
-| 23 | [`checkType(variable: any): string`](#checktypevariable-any-string) | `formValidator.checkType('hello')` | Determines the type of a given variable and returns a string representation of the type, or `'unknown'` if type cannot be determined. | ✅ | ✅ |
-| 24 | [getPageUrl():string](#getpageurlstring) | formValidator.getPageUrl() | Returns the current page URL | ✅ | ❌ |
+| 2  | [formValidator.validate():boolean](#validateboolean) | `formValidator.validate();` | Checks and validate all the input elements (inputs, textareas, select, checkboxs, etc) | ✅ | ❌ |
+| 3  | [`ajax(AJAXOptions: Object): Promise`](#ajaxajaxoptions-object-promise)            | `formValidator.ajax(AJAXOptions)`     | Makes an AJAX request using the provided options and returns a Promise with the server's response.                           | ✅               | ✅                          |
+| 4  | [`getAJAXResponse(): Promise`](#getajaxresponse-promise--false)            | `formValidator.getAJAXResponse();`     | Retrieves the response from the last AJAX request made using the `ajax` function. It returns a Promise if available, or false if the AJAX request has been resolved.                          | ✅               | ✅                          |
+| 5  | [`generateRandomPassword(): string`](#generaterandompassword-string) | `formValidator.generateRandomPassword(12, true)` | Generates a random password with the specified length and optional inclusion of special characters. | ✅ | ✅ |
+| 6  | [`checkPassword(password: string, shouldIncludeSymbol: bool): boolean`](#checkpasswordpassword-string-shouldincludesymbol-bool-boolean) | `formValidator.checkPassword('StrongP@ssword123', true)` | Checks the strength of the provided password against criteria like minimum length, character types, and optional symbol inclusion. | ✅ | ✅ |
+| 7  | [`isEmail(email: string): boolean`](#isemailemail-string-boolean)   | `formValidator.isEmail('example@example.com')`         | Checks if the given email is in a valid email format.                          | ✅               | ✅                         |
+| 8  | [`isURL(url: string): boolean`](#isurlurl-string-boolean)       | `formValidator.isURL('https://www.example.com')`       | Checks if the given string is a valid URL.                                    | ✅               | ✅                         |
+| 9  | [`isZipcode(zipcode: string): boolean`](#iszipcodezipcode-string-boolean) | `formValidator.isZipcode('12345')`                      | Checks if the given string is a valid ZIP code.                               | ✅               | ✅                         |
+| 10 | [`containsOnlyIntegers(inputValue: string): boolean`](#containsonlyintegersinputvalue-string-boolean) | `formValidator.containsOnlyIntegers('12345')`     | Checks if the given input value contains only integers.                      | ✅               | ✅                         |
+| 11 | [`countString(inputValue: string): number`](#countstringinputvalue-string-number) | `formValidator.countString('Hello, World!')`     | Counts the number of characters in the provided input value.                      | ✅               | ✅                         |
+| 12 | [`togglePasswordVisibility(icons: Object, form: HTMLFormElement or string)`](#togglepasswordvisibilityform-htmlformelement-or-string-icons-object) | `formValidator.togglePasswordVisibility({ 'show': '👁️', 'hide': '🙈' }, 'myForm');` | Enables password visibility toggle for password input fields within a form. | ✅               | ❌                         |
+| 13 | [`validateInput(input: HTMLInputElement or string): boolean`](#validateinputinput-htmlinputelement--string-boolean) | `formValidator.validateInput('usernameField')`     | Validates an input field with the specified ID or HTML input element.  | ✅               | ❌                         |
+| 14 | [`validateAllInput(): boolean`](#validateallinput-boolean)       | `formValidator.validateAllInput()`                    | Validates all input fields within the form. | ✅               | ❌                         |
+| 15 | [`validateSelect(select: HTMLSelectElement or string): boolean`](#validateselectselect-htmlselectelement--string-boolean) | `formValidator.validateSelect('countrySelect')`    | Validates a select field with the specified ID or HTML select element.   | ✅               | ❌                         |
+| 16 | [`validateAllSelect(): boolean`](#validateallselect-boolean)      | `formValidator.validateAllSelect()`                   | Validates all select fields within the form. | ✅               | ❌                         |
+| 17 | [`validateTextarea(textarea: HTMLTextAreaElement or string): boolean`](#validateselectselect-htmlselectelement--string-boolean) | `formValidator.validateTextarea('messageTextarea')` | Validates a textarea field with the specified ID or HTML textarea element.| ✅               | ❌                         |
+| 18 | [`validateAllTextarea(): boolean`](#validatealltextarea-boolean)    | `formValidator.validateAllTextarea()`                 | Validates all textarea fields within the form. | ✅               | ❌                         |
+| 19 | [`validateCheckbox(checkbox: HTMLInputElement or string): boolean`](#validateallcheckbox-boolean) | `formValidator.validateCheckbox('agreeCheckbox')`  | Validates a checkbox field with the specified ID or HTML checkbox element.  | ✅               | ❌                         |
+| 20 | [`validateAllCheckbox(): boolean`](#validateallcheckbox-boolean)    | `formValidator.validateAllCheckbox()`                 | Validates all checkbox fields within the form. | ✅               | ❌                         |
+| 21 | [`validateRadio(radioName: string): boolean`](#validateradioradioname-string-boolean) | `formValidator.validateRadio('genderRadio')`       | Validates a radio button group with the specified name. | ✅               | ❌                         |
+| 22 | [`validateAllRadio(): boolean`](#validateallradio-boolean)       | `formValidator.validateAllRadio()`                    | Validates all radio button groups within the form. | ✅               | ❌                         |
+| 23 | [`restrictInputLengthWithCounter(inputElement: HTMLInputElement, counterContainer: HTMLElement, options: Object = {})`](#restrictinputlengthwithcounterinputelement-htmlinputelement-countercontainer-htmlelement-options-object) | `formValidator.restrictInputLengthWithCounter('messageField', 100)` | Counts characters in the specified input field, restricts input, and displays a character counter.        | ✅               | ❌                         |
+| 24| [`checkType(variable: any): string`](#checktypevariable-any-string) | `formValidator.checkType('hello')` | Determines the type of a given variable and returns a string representation of the type, or `'unknown'` if type cannot be determined. | ✅ | ✅ |
+| 25 | [getPageUrl():string](#getpageurlstring) | `formValidator.getPageUrl()` | Returns the current page URL | ✅ | ❌ |
+| 26 | [formValidator.hashPassword(password):Promise](#formvalidatorhashpasswordpasswordpromise) | `formValidator.hashPassword('1234-efrgty').then((response)=>{ console.log(response) });` | Returns the promise which has the hashed password | ✅ | ✅ |
+
 
 
 
@@ -172,6 +175,24 @@ The `submit` function is used to submit a form. When you call this function, you
 ```javascript
 formValidator.submit();
 ```
+
+### `validate():boolean`
+
+The `validate()` function is used to validate a form. When you call this function, you are going to validating the form and will return a boolean value (true or false) to indicate if the form meets it's requirments.  If it does not meet the requirements, the error messages will be displayed.
+
+```
+
+if ( formValidator.validate() )
+{
+  console.log("Form Validation Success");
+}
+else
+{
+  console.error("Form Validation Failed");
+}
+
+```
+
 
 ### `isEmail(email: string): boolean`
 
