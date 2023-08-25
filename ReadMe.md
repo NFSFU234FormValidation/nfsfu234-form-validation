@@ -52,8 +52,8 @@ To use the library in your project, there are two ways to include NFSF234 Form V
 If you're looking to employ the form validation library in your browser environment, simply include the following URLs within the `<head>` tag of your HTML code:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/nfsfu234-form-validation@1.2.1/dist/css/nfsfu234FormValidation.css">
-<script src="https://unpkg.com/nfsfu234-form-validation@1.2.1/dist/js/nfsfu234FormValidation.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/nfsfu234-form-validation@1.2.2/dist/css/nfsfu234FormValidation.css">
+<script src="https://unpkg.com/nfsfu234-form-validation@1.2.2/dist/js/nfsfu234FormValidation.js"></script>
 ```
 
 This way, your browser-based project can readily harness the capabilities of the NFSFU234 Form Validation library. 🌐📦
