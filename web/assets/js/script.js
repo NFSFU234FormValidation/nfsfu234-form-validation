@@ -2,7 +2,6 @@
             {
 
                 item.addEventListener('click', ()=>{
-                    console.log(true);
                     const functionName = item.getAttribute('functionName');
                     const functionDescription = item.getAttribute('functionDescription');
                     const howToCallFunction = item.getAttribute('howToCall');

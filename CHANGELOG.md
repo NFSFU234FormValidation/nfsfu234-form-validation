@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.2.2] - 2023-08-25
+
+### Fixed
+
+- Fixed the Netlify website issue and added the neccessary file for the website.
 ## [1.2.1] - 2023-08-25
 
 ### Added
