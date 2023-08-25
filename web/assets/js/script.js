@@ -34,8 +34,8 @@
                         
 
                         <div class="supported">
-                            <small><span>Browser Supported? <span class="js-isBrowser"><mark>${ (isFunctionConsolesupported === '✅') ? 'Yes' : 'No' }</mark></span> </span></small>
-                            <small><span>Console Supported? <span class="js-isConsole"><mark>${(isFunctionBrowserSupported === '✅') ? 'Yes' : 'No' }</mark></span></span></small>
+                            <small><span>Browser Supported? <span class="js-isBrowser"><mark>${ (isFunctionBrowserSupported === '✅') ? 'Yes' : 'No' }</mark></span> </span></small>
+                            <small><span>Console Supported? <span class="js-isConsole"><mark>${( isFunctionConsolesupported === '✅') ? 'Yes' : 'No' }</mark></span></span></small>
                         </div>`;
 
 
