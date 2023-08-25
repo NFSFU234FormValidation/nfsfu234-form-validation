@@ -285,6 +285,18 @@ formValidator.ajax(AJAXOptions)
     // Error: AJAX request failed or rejected
     console.error('Request failed', error);
   });
+
+// OR
+
+(async () => {
+    try {
+        const response = await formValidator.ajax(ajaxOptions);
+        console.log(response);
+    } catch (error) {
+        console.error(error);
+    }
+})();  
+
 ```
 
 ### `getAJAXResponse(): Promise | false`
