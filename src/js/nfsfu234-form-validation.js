@@ -786,9 +786,10 @@
          * @param {HTMLFormElement} form - The form element to be submitted. Default is an empty string.
          * @returns {Promise} Returns a Promise that will resolve to the JSON response from the server or reject with an error.
          */
-        _submitFormAJAX(AJAXOptions, form = '') {
+        async _submitFormAJAX(AJAXOptions, form = '') {
+            form =  ( form && form !== '' ) ? form : this._form;
             // Extract AJAX request options from the provided AJAXOptions object
-            const url = AJAXOptions['url'] || this._getPageUrl();
+            const url = ( AJAXOptions && AJAXOptions['url'] ) ? AJAXOptions['url'] : this._getPageUrl();
             const requestMethod = AJAXOptions['RequestMethod'];
             const requestHeader = AJAXOptions['RequestHeader'];
             const responseType = (AJAXOptions['RequestType'] != undefined && AJAXOptions['RequestType'] != '') ? AJAXOptions['RequestType'] : 'json';
@@ -797,7 +798,7 @@
             var ajaxContents;
 
             // Based on the request method, configure the AJAX request parameters
-            if (requestMethod === 'POST' || requestMethod === 'PUT' || requestMethod === 'DELETE') {
+            if (requestMethod === 'POST' || requestMethod === 'PUT' || requestMethod === 'DELETE' || requestMethod === 'UPDATE') {
 
                 let requestData ;
 
@@ -833,43 +834,19 @@
              * Makes an AJAX request to the server.
              * The result is a Promise that will resolve to the JSON response from the server or reject with an error.
              */
-            let returnResult = fetch(url, ajaxContents)
-                .then(response => {
-                    if (!response.ok) {
-                        // Handle network errors and throw an error with an appropriate error message
-                        var error_msg;
+            let returnResult = await fetch(url, ajaxContents);
 
-                        if (response.status === 404) {
-                            error_msg = 'The Resource you are trying to access is either not found or returned a Page Not Found Error message.';
-                        } else if (response.status === 500) {
-                            error_msg = 'Internal server error';
-                        } else if (response.status === 405) {
-                            error_msg = 'Method Not Allowed';
-                        } else {
-                            error_msg = 'Network Response was not Okay';
-                        }
-
-                        throw new Error(error_msg);
-                    }
-
-                    // If the response is received successfully, parse it as JSON and return
+                if (returnResult.ok) {
                     console.log("AJAX Finished....");
+                    const data = await returnResult.json();
 
-                    if (responseType === 'json') {
-                        return response.json();
-                    } else {
-                        return response;
-                    }
-                })
-                .catch(error => {
-                    // If there is an error during the AJAX request, handle the error
-                    console.error(error.message);
-                    // Return the error for further handling
-                    return error;
-                });
+                    return data;
+                    // const token = data.token; // JWT token
+                    // Store the token in localStorage or a secure cookie.
+                } else {
+                    return "AJAX Failed....";
+                }
 
-            // Return the Promise that contains the AJAX result (JSON response or error)
-            return returnResult;
         }
 
         /**
@@ -924,7 +901,6 @@
                         }
                         return responseData;
                     } else {
-                        console.log("Validation Success");
                         // If form validation is successful, check if the AJAX request should be synchronous or asynchronous
                         if (this._countLengthOfObject(this._ajaxOptions) === 0) {
                             // If no AJAX options provided, perform a regular form submission without AJAX
@@ -964,8 +940,6 @@
                         }
                     }
 
-                    // // Return the response data (true or false) after processing the form and handling the AJAX request (if applicable)
-                    // return responseData;
                 });
             } else {
                 // If no submit button is found, log an error and return false
@@ -1124,15 +1098,13 @@
          * @param {Object} AJAXOptions - The object containing AJAX request options, including 'url', 'RequestMethod', 'RequestHeader', and optionally 'RequestType' (response type).
          * @returns {Promise} Returns a Promise that will resolve to the JSON response from the server or reject with an error.
          */
-        ajax(AJAXOptions) {
+        async ajax(AJAXOptions) {
             // Initialize the `_AJAXResult` variable to store the AJAX response
             this._AJAXResult = null;
 
-            // Perform the AJAX request using the private `_submitFormAJAX` function and store the response in `_AJAXResult`
-            this._AJAXResult = this._submitFormAJAX(AJAXOptions);
-
-            // Return the response from the AJAX request using the `getAJAXResponse` method
-            return this.getAJAXResponse();
+            // Perform the AJAX request using the private `_submitFormAJAX` function and return the response in `_AJAXResult`
+            return this._AJAXResult = await this._submitFormAJAX(AJAXOptions);
+            
         }
 
         /**
