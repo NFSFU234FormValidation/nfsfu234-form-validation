@@ -1,3 +1,7 @@
+'use strict';
+
+// Import bycrypt
+const bcrypt = require('bcryptjs');
 
 // This is an Immediately Invoked Function Expression (IIFE) that takes an argument 'global'.
 // The 'global' argument is set to the global object in the browser (window) or Node.js (global).
