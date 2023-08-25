@@ -34,6 +34,61 @@
             // Custom error messages provided in 'formOptions'.
             this._customErrorMessages = (formOptions && formOptions['customErrorMessages']) ? formOptions['customErrorMessages'] : [];
         }
+
+        /**
+         * Hashes a password securely based on the environment.
+         * @param {string} password - The password to be hashed.
+         * @returns {Promise<string>} A promise that resolves to the hashed password.
+         */
+        async _hashPassword(password) {
+            if (typeof window === 'undefined') {
+            // Node.js environment
+            return this._nodeHash(password);
+            } else {
+            // Browser environment
+            return this._browserHash(password);
+            }
+        }
+
+        /**
+         * Hashes a password using bcrypt in the browser environment.
+         * @param {string} password - The password to be hashed.
+         * @returns {Promise<string>} A promise that resolves to the hashed password.
+         */
+        async _browserHash(password) {
+            // Generate a unique salt for each password
+            const salt = await bcrypt.genSalt(10);
+
+            // Hash the password with the generated salt using bcrypt
+            const hashedPassword = await bcrypt.hash(password, salt);
+
+            return hashedPassword;
+        }
+
+        /**
+         * Hashes a password using bcrypt in the Node.js environment.
+         * @param {string} password - The password to be hashed.
+         * @returns {Promise<string>} A promise that resolves to the hashed password.
+         */
+        async _nodeHash(password) {
+
+            // Set an alternative random number generator for bcrypt
+            bcrypt.setRandomFallback((len) => {
+                const randomBytes = new Uint8Array(len);
+                for (let i = 0; i < len; i++) {
+                randomBytes[i] = Math.floor(Math.random() * 256);
+                }
+                return randomBytes;
+            });
+
+            // Generate a unique salt for each password
+            const salt = await bcrypt.genSalt(10);
+
+            // Hash the password with the generated salt using bcrypt
+            const hashedPassword = await bcrypt.hash(password, salt);
+
+            return hashedPassword;
+        }
         
         // Check if a given string is a valid email address.
         _isEmail(email) {
@@ -1126,6 +1181,16 @@
             return this._AJAXResult = await this._submitFormAJAX(AJAXOptions);
             
         }
+
+        /**
+         * Hashes a password securely, automatically detecting the environment.
+         * @param {string} password - The password to be hashed.
+         * @returns {Promise<string>} A promise that resolves to the hashed password.
+         */
+        async hashPassword(password) {
+            return this._hashPassword(password);
+        }
+                
 
         /**
          * validateInput
