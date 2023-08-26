@@ -861,13 +861,13 @@ const bcrypt = require('bcryptjs');
 
                 let requestData ;
 
-                if (typeof window !== 'undefined') {
-                    // Get the form data using the `_getFormDetails` function
-                    requestData = this._getFormDetails(form);
-                }
-                else if (AJAXOptions && AJAXOptions['RequestBody'])
+                if (AJAXOptions && AJAXOptions['RequestBody'])
                 {
                     requestData = AJAXOptions['RequestBody'];
+                }
+                else if (typeof window !== 'undefined') {
+                    // Get the form data using the `_getFormDetails` function
+                    requestData = this._getFormDetails(form);
                 }
                 else
                 {

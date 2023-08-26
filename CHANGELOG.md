@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.4] - 2023-08-26
+
+### Changed
+- Improved the `ajax()` function for a  more clean experience.
+
+### Fixed
+- Fixed the issue of `custom ajax request body not sending in browser rather getting the form details.`
+
 ## [1.2.3] - 2023-08-25
 
 ### Fixed

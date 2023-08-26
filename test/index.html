@@ -171,6 +171,14 @@
       }
       formValidator.restrictInputLengthWithCounter( form.querySelector('textarea') );
 
+      formValidator.hashPassword('@Password123')
+    .then( hashedPassword =>{
+        console.log(hashedPassword);
+    })
+    .catch( (error)=>{
+        console.error(error);
+    } );
+
     </script>
 
 </body>
