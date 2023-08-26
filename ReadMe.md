@@ -52,8 +52,8 @@ To use the library in your project, there are two ways to include NFSF234 Form V
 If you're looking to employ the form validation library in your browser environment, simply include the following URLs within the `<head>` tag of your HTML code:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/nfsfu234-form-validation@1.2.3/dist/css/nfsfu234FormValidation.min.css">
-<script src="https://unpkg.com/nfsfu234-form-validation@1.2.3/dist/js/nfsfu234FormValidation.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/nfsfu234-form-validation@1.2.4/dist/css/nfsfu234FormValidation.min.css">
+<script src="https://unpkg.com/nfsfu234-form-validation@1.2.4/dist/js/nfsfu234FormValidation.js"></script>
 ```
 
 This way, your browser-based project can readily harness the capabilities of the NFSFU234 Form Validation library. 🌐📦
@@ -68,11 +68,6 @@ If your preferred method involves npm, follow these simple steps to integrate th
 
 ```bash
 npm install nfsfu234-form-validation --save
-```
-
-```bash
-npm install bcrypt --save
-
 ```
 
 By executing this command, you're well on your way to enjoying the benefits of the NFSFU234 Form Validation library. 📦🚀
