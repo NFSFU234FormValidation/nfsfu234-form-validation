@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.0] - 2023-08-26
+
+### Breaking Change
+- Renamed the minified CSS output file from `nfsfu234-formValidation.min.css` to `nfsfu234FormValidation.min.css`, impacting how users refrence the minified CSS 
+
+### Other Changes
+- Updated the banner from the versioning banner to a more staticand elegant banner.
+
 ## [1.2.4] - 2023-08-26
 
 ### Changed

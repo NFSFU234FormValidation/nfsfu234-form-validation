@@ -21,7 +21,7 @@ module.exports = {
       filename: 'css/nfsfu234FormValidation.css', // Original CSS filename
     }),
     new MiniCssExtractPlugin({
-        filename: 'css/nfsfu234-formValidation.min.css', // Minified CSS filename
+        filename: 'css/nfsfu234FormValidation.min.css', // Minified CSS filename
     }),
   ],
   optimization: {
