@@ -16,6 +16,7 @@
 ### Fixed
 - Fixed the issue of `custom ajax request body not sending in browser rather getting the form details.`
 
+
 ## [1.2.3] - 2023-08-25
 
 ### Fixed
