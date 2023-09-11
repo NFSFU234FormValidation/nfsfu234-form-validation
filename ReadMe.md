@@ -52,8 +52,8 @@ To use the library in your project, there are two ways to include NFSF234 Form V
 If you're looking to employ the form validation library in your browser environment, simply include the following URLs within the `<head>` tag of your HTML code:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/nfsfu234-form-validation@2.0.0/dist/css/nfsfu234FormValidation.min.css">
-<script src="https://unpkg.com/nfsfu234-form-validation@2.0.0/dist/js/nfsfu234FormValidation.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/nfsfu234-form-validation@2.1.0/dist/css/nfsfu234FormValidation.min.css">
+<script src="https://unpkg.com/nfsfu234-form-validation@2.1.0/dist/js/nfsfu234FormValidation.js"></script>
 ```
 
 This way, your browser-based project can readily harness the capabilities of the NFSFU234 Form Validation library. 🌐📦
@@ -156,7 +156,8 @@ Here you'll find a compilation of functions available within the NFSFU234 Form V
 | 23 | [`restrictInputLengthWithCounter(inputElement: HTMLInputElement, counterContainer: HTMLElement, options: Object = {})`](#restrictinputlengthwithcounterinputelement-htmlinputelement-countercontainer-htmlelement-options-object) | `formValidator.restrictInputLengthWithCounter('messageField', 100)` | Counts characters in the specified input field, restricts input, and displays a character counter.        | ✅               | ❌                         |
 | 24| [`checkType(variable: any): string`](#checktypevariable-any-string) | `formValidator.checkType('hello')` | Determines the type of a given variable and returns a string representation of the type, or `'unknown'` if type cannot be determined. | ✅ | ✅ |
 | 25 | [getPageUrl():string](#getpageurlstring) | `formValidator.getPageUrl()` | Returns the current page URL | ✅ | ❌ |
-| 26 | [formValidator.hashPassword(password):Promise](#formvalidatorhashpasswordpasswordpromise) | `formValidator.hashPassword('1234-efrgty').then((response)=>{ console.log(response) });` | Returns the promise which has the hashed password | ✅ | ✅ |
+| 26 | [hashPassword(password):Promise](#hashpasswordpasswordpromise) | `formValidator.hashPassword('1234-efrgty').then((response)=>{ console.log(response) });` | Returns the promise which has the hashed password | ✅ | ✅ |
+| 27 | [displayError(errorDetails:object):void](#displayerrorerrordetailsvoid) | `formValidator.displayError(errorDetails)` | Displays an error message for a given period of time | ✅ | ❌ |
 
 
 
@@ -600,7 +601,7 @@ const variable = () => { console.log("Hello, world!"); };
 const type = formValidator.checkType(variable); // Returns: 'function'
 ```
 
-### `formValidator.hashPassword(password):Promise`
+### `hashPassword(password):Promise`
 The `formValidator.hashPassword()` function is a function tht is used to hash a password or string. It uses the ByCrypt Library to has the string passed.
 
 #### Usage
@@ -613,6 +614,105 @@ formValidator.hashPassword('@Password123')
         console.error(error);
     } );
 ```
+### `displayError(errorDetails):void`
+The `displayError()` function is used to display an error.  The error can either be inline or modal. This function takes up 1 parameter and it is an object. Find below the paramters required
+
+#### Parameters:
+
+- `errorDetails`: An object containing the following  error details options:
+  - `type` (required): The type of error message container you would like to use. You have 2 options either `inline` or `modal`.
+  - `message` (required): The message that is to be displayed.
+  - `duration` (required): The duration for the message to be shown
+  - `element` (required): This is a HTML Element where the error container will be passed to. It can be an input or textarea element or probally a section or div element, whichever meets the requirements for the error you want to display.
+  - `success` (optional): You are indicating if this is a success or failure message. If not set, the default of `failure` will be used.
+
+#### Usage
+
+```javascript
+// Assuming you have already created an instance of the library named 'formValidator'
+
+const form = document.getElementById('form');
+
+const errorDetails = {
+  type : 'modal',
+  message: 'Hello World👋',
+  duration: 3000,
+  element: form,
+  success: false,
+}
+
+formValidator.displayError(errorDetails);
+
+```
+
+#### Example
+Assumming you make a request to an API and you will need to display the response message to the user, the perfect way to that is to use the `ajax()` function thereafter you can use the `displayError()` function and in your type attribute,  it is most preffered to use `modal` type. Assuming the response has a status and message attribute on response. Let's take a look at how this works.
+
+```javascript
+// Assuming you have already created an instance of the library named 'formValidator'
+
+
+// Getting the HTML Form ELement from the Document
+const form = document.getElementById('form');
+
+const AJAXOptions = {
+  url: 'https://api.example.com/data', // URL for the AJAX request
+  RequestMethod: 'GET', // Request method
+  RequestHeader: {
+    'Content-Type': 'application/json', // Example request header
+    // Add other request headers if needed
+  },
+};
+
+formValidator.ajax(AJAXOptions)
+  .then((response) => {
+    // Success: Server response received in JSON format
+    console.log('Request successful', response);
+
+    // Getting the neccessary information from the response
+    const status = response.status;
+    const message = response.message;
+
+    let errorDetails;
+
+    // Checking if the status of the respond code is not 200(ok)
+    // Then we set the message to the message variable, the element to the form variable,  set duration to 3 seconds  and then set the success attribute to false.
+    if ( status != 200 )
+    {
+        errorDetails = {
+            type : 'modal',
+            message: message,
+            duration: 3000,
+            element: form,
+            success: false,
+        }
+    }
+    else
+    {
+      // Response is 200(ok) so we set the success attribute to be true
+      // We assumme this is a success message
+        errorDetails = {
+            type : 'modal',
+            message: message,
+            duration: 3000,
+            element: form,
+            success: true,
+        }
+    }
+
+
+    // We ca;; the displayError function to display the error.
+    formValidator.displayError(errorDetails);
+
+
+  })
+  .catch((error) => {
+    // Error: AJAX request failed or rejected
+    console.error('Request failed', error);
+  });
+
+```
+
 
 ## Using NFSF234 Form Validation Library in Node.js Application
 

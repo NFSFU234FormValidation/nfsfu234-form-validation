@@ -152,6 +152,10 @@ const bcrypt = require('bcryptjs');
             else if (variable === null) {
             return 'null';
             }
+            // Check if the variable is an HTMLElement (assumes that HTMLElement is defined in the environment)
+            else if (variable instanceof HTMLElement) {
+            return 'HTML element';
+            }
             // Check if the variable is an array
             else if (typeof variable === 'object' && variable instanceof Array) {
             return 'array';
@@ -163,10 +167,6 @@ const bcrypt = require('bcryptjs');
             // Check if the variable is a function
             else if (typeof variable === 'function') {
             return 'function';
-            }
-            // Check if the variable is an HTMLElement (assumes that HTMLElement is defined in the environment)
-            else if (variable instanceof HTMLElement) {
-            return 'HTML element';
             }
             // If none of the above conditions match, the data type is unknown
             else {
@@ -1027,6 +1027,57 @@ const bcrypt = require('bcryptjs');
             }
 
         }
+
+        /**
+         * Display an error message in the specified manner.
+         *
+         * @param {Object} details - The details of the error message.
+         * @param {string} details.type - The type of error display (either 'inline' or 'modal').
+         * @param {string} details.message - The error message to be displayed.
+         * @param {number} details.duration - The duration for which the error message should be visible.
+         * @param {HTMLElement} details.element - The HTML element to which the error message is associated.
+         * @param {boolean} [details.success=false] - A flag indicating whether the operation was successful.
+         * @returns {boolean} Returns true if the error message was displayed successfully, false otherwise.
+         */
+        displayError(details) {
+            // Check if the code is running in a browser environment
+            if (typeof window === 'undefined') {
+                // Display an error message if not in a browser environment
+                console.error("To access this function, you will need to execute it in a browser like Google Chrome, Safari, FireFox, Microsoft Edge, etc.");
+                return false;
+            }
+
+            // Extract relevant information from the 'details' object
+            const type = details.type;
+            const message = details.message;
+            const duration = details.duration;
+            const inputField = details.element;
+            const isSuccess = (details.success && details.success === true) ? true : false;
+
+            // Check if required parameters are missing
+            if (!type || !message || !duration) return false;
+
+            // Check if 'inputField' is a valid HTML element
+            if (this.checkType(inputField) !== 'HTML element') {
+                // Display an error message if 'inputField' is not a valid HTML element
+                console.error("The HTML Element you are trying to use is not found.");
+                return false;
+            }
+
+            // Set the 'position' property of 'inputField' to 'relative'
+            inputField.style.position = 'relative';
+
+            // Determine the type of error display and invoke the appropriate function
+            if (type === 'inline') {
+                this._displayErrorInline(inputField, message, duration, isSuccess);
+            } else if (type === 'modal') {
+                this._displayErrorModal(message, inputField, '', duration, isSuccess);
+            } else {
+                // Display an error message for unsupported error display types
+                console.error("The type of error display you specified is not supported.");
+            }
+        }
+
 
         /**
          * isEmail
