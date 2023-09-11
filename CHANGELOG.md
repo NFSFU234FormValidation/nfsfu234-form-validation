@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.1.0] - 2023-09-09
+### Added
+- Added the `displayError()` function which accepts 1 parameter of data type object. See more details and how to use  it in the [ReadMe](ReadMe)
 ## [2.0.0] - 2023-08-26
 
 ### Breaking Change
