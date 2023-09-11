@@ -152,6 +152,10 @@ const bcrypt = require('bcryptjs');
             else if (variable === null) {
             return 'null';
             }
+            // Check if the variable is an HTMLElement (assumes that HTMLElement is defined in the environment)
+            else if (variable instanceof HTMLElement) {
+            return 'HTML element';
+            }
             // Check if the variable is an array
             else if (typeof variable === 'object' && variable instanceof Array) {
             return 'array';
@@ -163,10 +167,6 @@ const bcrypt = require('bcryptjs');
             // Check if the variable is a function
             else if (typeof variable === 'function') {
             return 'function';
-            }
-            // Check if the variable is an HTMLElement (assumes that HTMLElement is defined in the environment)
-            else if (variable instanceof HTMLElement) {
-            return 'HTML element';
             }
             // If none of the above conditions match, the data type is unknown
             else {
@@ -1024,6 +1024,47 @@ const bcrypt = require('bcryptjs');
                 // If no submit button is found, log an error and return false
                 console.error("No Submit Button was found. Refer to NFORSHIFU234 FORM Validation documentation at http://documentation.nforshifu.com/");
                 return false;
+            }
+
+        }
+
+        displayError(details)
+        {
+
+            if (typeof window === 'undefined') {
+                console.error("To access this function, you will need to execute it in a browser like, Google Chrome, Safari, FireFox, Microsoft Edge, etc.");
+                return false;
+            }
+
+            const type = details.type;
+            const message = details.message;
+            const duration = details.duration;
+            const inputFeild = details.element;
+            const isSuccess = (details.success && details.success === true) ? true : false;
+
+            if ( !type || !message || !duration ) return false;
+
+            if ( this.checkType(inputFeild) !== 'HTML element' )
+            {
+                console.error("The HTML Element you are tying to use is not found.");
+                return false;
+            }
+
+            inputFeild.style.position = 'relative';
+
+            if ( type === 'inline' )
+            {
+
+                this._displayErrorInline(inputFeild,message, duration, isSuccess)
+
+            }
+            else if( type === 'modal' )
+            {
+                this._displayErrorModal(message, inputFeild, '', duration, isSuccess);
+            }
+            else
+            {
+                console.error("The type of error display you placed is not supported.");
             }
 
         }
