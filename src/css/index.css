@@ -141,7 +141,9 @@
   }
   
   /* Styling for elements with the spin class */
-  .spin {
+  .spin, 
+  .js-spin
+  {
     animation: spin 1s infinite linear; /* Apply the spinning animation */
   }
   

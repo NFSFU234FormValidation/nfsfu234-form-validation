@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.2.0] - 2023-09-25
+
+### Added
+
+- Added `loading()` function, this function is used to add your loading message incase you wished to have a custom loading animation or text if you choose not to use the defualt submit function. This function takes 2 parameters. See more information in the [ReadMe](ReadMe)
+
+- Added a new HTML class, `js-spin` to be add to the previous `spin` class for adding sping effect to an element.
+
 ## [2.1.0] - 2023-09-09
 ### Added
 - Added the `displayError()` function which accepts 1 parameter of data type object. See more details and how to use  it in the [ReadMe](ReadMe)
