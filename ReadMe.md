@@ -52,8 +52,8 @@ To use the library in your project, there are two ways to include NFSF234 Form V
 If you're looking to employ the form validation library in your browser environment, simply include the following URLs within the `<head>` tag of your HTML code:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/nfsfu234-form-validation@2.1.0/dist/css/nfsfu234FormValidation.min.css">
-<script src="https://unpkg.com/nfsfu234-form-validation@2.1.0/dist/js/nfsfu234FormValidation.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/nfsfu234-form-validation@2.2.0/dist/css/nfsfu234FormValidation.min.css">
+<script src="https://unpkg.com/nfsfu234-form-validation@2.2.0/dist/js/nfsfu234FormValidation.js"></script>
 ```
 
 This way, your browser-based project can readily harness the capabilities of the NFSFU234 Form Validation library. 🌐📦
@@ -158,6 +158,7 @@ Here you'll find a compilation of functions available within the NFSFU234 Form V
 | 25 | [getPageUrl():string](#getpageurlstring) | `formValidator.getPageUrl()` | Returns the current page URL | ✅ | ❌ |
 | 26 | [hashPassword(password):Promise](#hashpasswordpasswordpromise) | `formValidator.hashPassword('1234-efrgty').then((response)=>{ console.log(response) });` | Returns the promise which has the hashed password | ✅ | ✅ |
 | 27 | [displayError(errorDetails:object):void](#displayerrorerrordetailsvoid) | `formValidator.displayError(errorDetails)` | Displays an error message for a given period of time | ✅ | ❌ |
+| 28 | [loading(message:string, submitBtn: HTM,String)](#loadingmessage-submitbtn--nullbool) | `formValidator.loading("Loading...", "submitBtnId")` | Displays a loading message for your button | ✅ | ❌|
 
 
 
@@ -701,7 +702,7 @@ formValidator.ajax(AJAXOptions)
     }
 
 
-    // We ca;; the displayError function to display the error.
+    // We call the displayError function to display the error.
     formValidator.displayError(errorDetails);
 
 
@@ -713,6 +714,27 @@ formValidator.ajax(AJAXOptions)
 
 ```
 
+### `loading(message, submitBtn = null):bool`
+The `loading()` function is used to display a loading message in your button. This function is ideal if you choose to use the validate() function independly. Because you might wish for the users to know they are awaiting a response, so you can have a little message or animation you wish to show between validation and perhaps awaiting the results from the AJAX request.
+
+#### Parameters:
+
+- `message`: This will contain the message or HTML contents you wish to insert into your Button or set as the value of the button.
+- `submitBtn (optional)`: This is optional because assuming you have initialized the NFSFU234FormValidation Library, you would have had an inital form so the button or submit button found in the form will be used else you want a diffrent button, you can either pass the HTML Element or pass the ID of the button
+
+#### Usage
+
+```javascript
+// Assuming you have already created an instance of the library named 'formValidator'
+
+// Using the Default Button
+formValidator.loading('Loading Message');
+
+// Using a Difffrent Button || Assuming your form has diffrent buttons
+const button = document.getElementById('btnId');
+formValidator.loading('Loading Message', button);
+
+```
 
 ## Using NFSF234 Form Validation Library in Node.js Application
 
