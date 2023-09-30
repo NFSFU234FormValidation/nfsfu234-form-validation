@@ -14,6 +14,9 @@
 
 ![Banner](images/IMG-d09df89sdfc0879sf08.png)
 
+# 🚀 **Happy Independence Day!** 🇳🇬
+![Independence Day Banner](images/Nigeria-Independence-Day-NFSFU234FormValidationBanner.png)
+
 ### Table of Contents 📑
 - [Description](#🚀-description)
 - [Installation](#🛠️-installation)
@@ -52,8 +55,8 @@ To use the library in your project, there are two ways to include NFSF234 Form V
 If you're looking to employ the form validation library in your browser environment, simply include the following URLs within the `<head>` tag of your HTML code:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/nfsfu234-form-validation@2.2.0/dist/css/nfsfu234FormValidation.min.css">
-<script src="https://unpkg.com/nfsfu234-form-validation@2.2.0/dist/js/nfsfu234FormValidation.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/nfsfu234-form-validation@2.3.0/dist/css/nfsfu234FormValidation.min.css">
+<script src="https://unpkg.com/nfsfu234-form-validation@2.3.0/dist/js/nfsfu234FormValidation.js"></script>
 ```
 
 This way, your browser-based project can readily harness the capabilities of the NFSFU234 Form Validation library. 🌐📦
@@ -159,7 +162,8 @@ Here you'll find a compilation of functions available within the NFSFU234 Form V
 | 26 | [hashPassword(password):Promise](#hashpasswordpasswordpromise) | `formValidator.hashPassword('1234-efrgty').then((response)=>{ console.log(response) });` | Returns the promise which has the hashed password | ✅ | ✅ |
 | 27 | [displayError(errorDetails:object):void](#displayerrorerrordetailsvoid) | `formValidator.displayError(errorDetails)` | Displays an error message for a given period of time | ✅ | ❌ |
 | 28 | [loading(message:string, submitBtn: HTM,String)](#loadingmessage-submitbtn--nullbool) | `formValidator.loading("Loading...", "submitBtnId")` | Displays a loading message for your button | ✅ | ❌|
-
+| 29 | [isOnline()](#isonline-boolean) | formValidator.`isOnline()` | Checks if your browser's online 🌐 | ✅ | ❌ |
+| 30 | [reset(form?: HTMLFormElement)](#resetform-htmlformelement-boolean) | `formValidator.reset()` | Reset form inputs and selections 🔄 | ✅ | ❌ |
 
 
 
@@ -735,6 +739,31 @@ const button = document.getElementById('btnId');
 formValidator.loading('Loading Message', button);
 
 ```
+
+### `isOnline(): boolean`
+
+The `isOnline` function checks if the current environment is a browser and determines whether the browser is online. It does this by examining the `navigator.onLine` property, which indicates the online status of the browser. This function is useful when you need to verify the browser's connectivity status before making network requests or performing actions that depend on internet access.
+
+The function returns a boolean value, `true` if the browser is online and `false` if it's not.
+
+```javascript
+const isBrowserOnline = formValidator.isOnline();
+console.log(isBrowserOnline); // true or false
+```
+### `reset(form?: HTMLFormElement): boolean`
+
+The `reset` function provides a convenient way to reset form elements within a given HTML form or the internal form of a validation tool. It resets input fields, textareas, selects, radios, and checkboxes to their default values or empty states, ensuring that the form is in a clean state.
+
+You can optionally pass a `form` parameter to specify a different form to reset; otherwise, it will operate on the internal form. This function can be particularly helpful when you want to clear user inputs and start fresh after a form submission or user interaction.
+
+The function returns a boolean value, `true` if the reset operation is successful, and `false` if any issues occur during the reset process.
+
+```javascript
+const isResetSuccessful = formValidator.reset(); // Resets the internal form
+console.log(isResetSuccessful); // true or false
+
+```
+
 
 ## Using NFSF234 Form Validation Library in Node.js Application
 

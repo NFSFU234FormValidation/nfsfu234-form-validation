@@ -183,7 +183,7 @@
     },
     {
       "Function Name": "displayError(errorDetails):void",
-      "How to Call": "formValidator.errorDetails({ type : 'modal', message: response.message, duration: 3000, element: form, success: true })",
+      "How to Call": "formValidator.displayError({ type : 'modal', message: response.message, duration: 3000, element: form, success: true })",
       "Description": "Displays and error message based on the object information you passed",
       "Browser Supported": "✅",
       "Console Supported (Node.js)": "❌"
@@ -192,6 +192,20 @@
       "Function Name": "loading(message:string, submitBtn: HTM,String):bool",
       "How to Call": "formValidator.loading('Loading Message');",
       "Description": "The loading() function is used to display a loading message in your button. This function is ideal if you choose to use the validate() function independly. Because you might wish for the users to know they are awaiting a response, so you can have a little message or animation you wish to show between validation and perhaps awaiting the results from the AJAX request.",
+      "Browser Supported": "✅",
+      "Console Supported (Node.js)": "❌"
+    },
+    {
+      "Function Name": "isOnline(): bool",
+      "How to Call": "const onlineStatus = formValidator.isOnline();",
+      "Description": "The isOnline() function checks whether the current environment is a browser and determines if the browser is online. It returns true if the browser is online, and false otherwise.",
+      "Browser Supported": "✅",
+      "Console Supported (Node.js)": "❌"
+    },
+    {
+      "Function Name": "reset(form?: HTMLFormElement): bool",
+      "How to Call": "const isResetSuccessful = formValidator.reset(); // Resets the internal form",
+      "Description": "The reset() function resets form elements, including input fields, textareas, selects, radios, and checkboxes, to their default values or empty states. You can provide an optional form parameter to specify a different form to reset.",
       "Browser Supported": "✅",
       "Console Supported (Node.js)": "❌"
     }
