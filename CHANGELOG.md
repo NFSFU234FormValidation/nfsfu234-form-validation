@@ -1,5 +1,25 @@
 # Changelog
 
+
+## [2.3.1] - 2023-10-01
+
+# 🚀 **Happy Independence Day!** 🇳🇬
+![Independence Day Banner](images/Nigeria-Independence-Day-NFSFU234FormValidationBanner.png)
+
+Celebrate this special day with my latest release!
+
+### Added
+- Added `isOnline()` function to check if a browser is connected to the internet or not
+- Added `reset()` function to reset all the inputs to an empty value
+
+### Changed
+- Added comments to describe the `loading()` function released in the previous version(`v2.2.0`) in the `nfsfu234-form-validation.js` file located in the `src` folder
+
+- Reviewd and edited the `displayError() function`list details in the `web/json/function-list.json` file,
+
+
+Stay tuned for more updates and enjoy your Independence Day!
+
 ## [2.2.0] - 2023-09-25
 
 ### Added

@@ -928,32 +928,46 @@ const bcrypt = require('bcryptjs');
             return false; // Form validation failed
         }
         
-        loading(message, submitBtn = null)
-        {
-
+        /**
+         * Changes the content of a button or input element to a specified message while providing loading feedback.
+         *
+         * @param {string} message - The message to set as the content of the button or input element.
+         * @param {string | HTMLElement | null} submitBtn - The button or input element to update. Can be a string (for element ID), an actual HTML element, or null to automatically find a suitable element.
+         * @returns {boolean} Returns true if the operation is successful, false if the button is not found.
+         */
+        loading(message, submitBtn = null) {
             let btn;
-            if ( this._checkVariableType(submitBtn) === 'HTML element' )
-            {
+
+            // Check the type of submitBtn and find the corresponding element
+            if (this._checkVariableType(submitBtn) === 'HTML element') {
                 btn = submitBtn;
-            }
-            else if ( this._checkVariableType(submitBtn) === 'string' && document.getElementById(`${submitBtn}`) )
-            {
+            } else if (
+                this._checkVariableType(submitBtn) === 'string' &&
+                document.getElementById(`${submitBtn}`)
+            ) {
                 btn = document.getElementById(`${submitBtn}`);
-            }
-            else if ( submitBtn === null )
-            {
-                btn = this._form.querySelector('button[type=submit]') || this._form.querySelector('button[type=submit]') || this._form.querySelector('input[type=submit]') || this._form.querySelector('#jsSubmit') || this._form.querySelector('button') || false;
-            }
-            else
-            {
-                console.error("The Button you are trying to change the contents is not found. Check Your HTML Code");
+            } else if (submitBtn === null) {
+                // Attempt to find a suitable button element if submitBtn is null
+                btn =
+                    this._form.querySelector('button[type=submit]') ||
+                    this._form.querySelector('button[type=submit]') ||
+                    this._form.querySelector('input[type=submit]') ||
+                    this._form.querySelector('#jsSubmit') ||
+                    this._form.querySelector('button') ||
+                    false;
+            } else {
+                // Handle the case where the button is not found
+                console.error(
+                    "The Button you are trying to change the contents is not found. Check Your HTML Code"
+                );
                 return false;
             }
 
-            (btn.value) ? btn.value = message : btn.innerHTML = message;
+            // Update the content of the button with the provided message
+            btn.value ? (btn.value = message) : (btn.innerHTML = message);
             return true;
-
         }
+
 
         /**
          * Submit Form with Validation and Optional AJAX
@@ -1918,6 +1932,83 @@ const bcrypt = require('bcryptjs');
                 return 'unknown';
             }
         }
+
+        /**
+         * Checks if the current environment is a browser and determines whether the browser is online.
+         *
+         * @returns {boolean} Returns true if the browser is online, false otherwise.
+         */
+        isOnline() {
+            // Check if the code is running in a browser environment
+            if (typeof window === 'undefined') {
+                console.error(
+                    "You need to be in a browser environment like Google Chrome, Safari, Firefox, Microsoft Edge, etc. for this function to work."
+                );
+                return false;
+            }
+
+            // Check if the browser reports that it is online
+            if (navigator.onLine) {
+                return true;
+            }
+
+            // Return false if the browser is not online
+            return false;
+        }
+
+
+        /**
+         * Resets the form elements, including input fields, textareas, selects, radios, and checkboxes, to their default values or empty states.
+         *
+         * @param {HTMLFormElement} [form] - The form element to reset. If not provided, the internal form (this._form) will be used.
+         * @returns {boolean} Returns true if the reset operation is successful, false otherwise.
+         */
+        reset(form = null) {
+            // Check if the code is running in a browser environment
+            if (typeof window === 'undefined') {
+                console.error(
+                    "You need to be in a browser environment like Google Chrome, Safari, Firefox, Microsoft Edge, etc. for this function to work."
+                );
+                return false;
+            }
+
+            // Use the provided form or the internal form as the target
+            const r_form = form || this._form;
+
+            // Select all input fields in the form and reset their values
+            const allInputsInForm = r_form.querySelectorAll('input');
+            allInputsInForm.forEach(input => {
+                input.value = '';
+            });
+
+            // Select all textareas in the form and reset their values
+            const allTextareasInForm = r_form.querySelectorAll('textarea');
+            allTextareasInForm.forEach(textarea => {
+                textarea.value = '';
+                textarea.innerHTML = '';
+            });
+
+            // Select all select elements in the form and reset their selected index
+            const allSelectsInForm = r_form.querySelectorAll('select');
+            allSelectsInForm.forEach(select => {
+                select.selectedIndex = 0;
+            });
+
+            // Select all radio buttons in the form and toggle their checked state
+            const allRadiosInForm = r_form.querySelectorAll('input[type=radio]');
+            allRadiosInForm.forEach(radio => {
+                radio.checked = !radio.checked;
+            });
+
+            // Select all checkboxes in the form and toggle their checked state
+            const allCheckboxesInForm = r_form.querySelectorAll('input[type=checkbox]');
+            allCheckboxesInForm.forEach(checkbox => {
+                checkbox.checked = !checkbox.checked;
+            });
+
+            return true;
+        }
+
 
 
     }
