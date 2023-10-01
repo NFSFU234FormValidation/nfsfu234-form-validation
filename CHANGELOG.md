@@ -1,7 +1,11 @@
 # Changelog
 
 
-## [2.3.1] - 2023-10-01
+## [2.3.0-patch] - 2023-10-01
+
+### Fixed
+- Fixed the error of the new features `isOnline()` and `reset()` is not working in the initial `v2.3.0`.
+## [2.3.0] - 2023-10-01
 
 # 🚀 **Happy Independence Day!** 🇳🇬
 ![Independence Day Banner](images/Nigeria-Independence-Day-NFSFU234FormValidationBanner.png)

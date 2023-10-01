@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- Load NFSFU234FormValidation Library -->
-    <script src="https://unpkg.com/nfsfu234-form-validation@2.1.0/dist/js/nfsfu234FormValidation.js"></script>
+    <script src="https://unpkg.com/nfsfu234-form-validation@2.3.0-patch/dist/js/nfsfu234FormValidation.js"></script>
     <script src="assets/js/script.js"></script>
 
-    <script> const ajaxOptions = { url: 'https://unpkg.com/nfsfu234-form-validation@2.1.0/package.json', RequestMethod: 'GET', }; const NFSFU234FormValidationLibrary = new NFSFU234FormValidation(); (async () => { try { 
+    <script> const ajaxOptions = { url: 'https://unpkg.com/nfsfu234-form-validation@2.3.0-patch/package.json', RequestMethod: 'GET', }; const NFSFU234FormValidationLibrary = new NFSFU234FormValidation(); (async () => { try { 
         const response = await NFSFU234FormValidationLibrary.ajax(ajaxOptions); 
         const title = `${ response.name.toUpperCase() } - v${response.version}`; 
         document.title = title; 
