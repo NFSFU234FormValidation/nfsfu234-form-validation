@@ -2,13 +2,14 @@
 
 [![License](https://img.shields.io/npm/l/nfsfu234-form-validation?style=social)](https://github.com/nforshifu234dev/nfsfu234-form-validation/blob/main/LICENSE)
 [![npm](https://img.shields.io/npm/v/nfsfu234-form-validation?style=social)](https://www.npmjs.com/package/nfsfu234-form-validation)
+![Downloads](https://img.shields.io/npm/dw/nfsfu234-form-validation?style=social)
 ![GitHub stars](https://img.shields.io/github/stars/nforshifu234dev/nfsfu234-form-validation?style=social)
 ![GitHub Issues](https://img.shields.io/github/issues/nforshifu234dev/nfsfu234-form-validation?style=social)
 ![GitHub Pull Requests](https://img.shields.io/github/issues-pr/nforshifu234dev/nfsfu234-form-validation?style=social)
  ![GitHub Forks](https://img.shields.io/github/forks/nforshifu234dev/nfsfu234-form-validation?style=social)
 ![Contributors](https://img.shields.io/github/contributors/nforshifu234dev/nfsfu234-form-validation?style=social)
 ![Last Commit](https://img.shields.io/github/last-commit/nforshifu234dev/nfsfu234-form-validation?style=social)
-![Downloads](https://img.shields.io/npm/dw/nfsfu234-form-validation?style=social)
+[![jsDelivr](https://data.jsdelivr.com/v1/package/npm/nfsfu234-form-validation/badge)](https://www.jsdelivr.com/package/npm/nfsfu234-form-validation)
 
 
 
