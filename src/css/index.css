@@ -146,6 +146,13 @@
   {
     animation: spin 1s infinite linear; /* Apply the spinning animation */
   }
+
+  svg.spin, 
+  svg.js-spin
+  {
+    width: 25px;
+    height: 25px;
+  }
   
   /* Styling for show password button */
   .cssShowPassword {
