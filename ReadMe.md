@@ -10,19 +10,34 @@
 ![Contributors](https://img.shields.io/github/contributors/nforshifu234dev/nfsfu234-form-validation?style=social)
 ![Last Commit](https://img.shields.io/github/last-commit/nforshifu234dev/nfsfu234-form-validation?style=social)
 [![jsDelivr](https://data.jsdelivr.com/v1/package/npm/nfsfu234-form-validation/badge)](https://www.jsdelivr.com/package/npm/nfsfu234-form-validation)
+[![Socket Badge](https://socket.dev/api/badge/npm/package/nfsfu234-form-validation)](https://socket.dev/npm/package/nfsfu234-form-validation)
 
 
 
 ![Banner](images/IMG-d09df89sdfc0879sf08.png)
 
-# 🚀 **Happy Independence Day!** 🇳🇬
-![Independence Day Banner](images/Nigeria-Independence-Day-NFSFU234FormValidationBanner.png)
+<div align="center" >
+
+# Hello || Salute || Hola || 你好  👋
+
+</div>
+<div align="center" style="display:flex; justify-content: center;" >
+
+<a href="https://x.com/nf_validator234/" target="_blank" style="color: lightblue; margin: 0 5px" title="NFSFU234 Form Validation library on X" ><svg viewBox='0 0 24 24' aria-hidden='true' fill="currentcolor" height='30' width='30' role='img' ><g><path d='M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z'></path></g></svg></a>
+
+<a href="https://www.instagram.com/nf_validator234/" title="NFSFU234 Form Validation library on Instagram" target="_blank" style="color: lightblue; margin: 0 5px"><svg aria-label='Instagram' fill="currentcolor" height='30' width='30' role='img' viewBox='0 0 24 24' ><path d='M12 2.982c2.937 0 3.285.011 4.445.064a6.087 6.087 0 0 1 2.042.379 3.408 3.408 0 0 1 1.265.823 3.408 3.408 0 0 1 .823 1.265 6.087 6.087 0 0 1 .379 2.042c.053 1.16.064 1.508.064 4.445s-.011 3.285-.064 4.445a6.087 6.087 0 0 1-.379 2.042 3.643 3.643 0 0 1-2.088 2.088 6.087 6.087 0 0 1-2.042.379c-1.16.053-1.508.064-4.445.064s-3.285-.011-4.445-.064a6.087 6.087 0 0 1-2.043-.379 3.408 3.408 0 0 1-1.264-.823 3.408 3.408 0 0 1-.823-1.265 6.087 6.087 0 0 1-.379-2.042c-.053-1.16-.064-1.508-.064-4.445s.011-3.285.064-4.445a6.087 6.087 0 0 1 .379-2.042 3.408 3.408 0 0 1 .823-1.265 3.408 3.408 0 0 1 1.265-.823 6.087 6.087 0 0 1 2.042-.379c1.16-.053 1.508-.064 4.445-.064M12 1c-2.987 0-3.362.013-4.535.066a8.074 8.074 0 0 0-2.67.511 5.392 5.392 0 0 0-1.949 1.27 5.392 5.392 0 0 0-1.269 1.948 8.074 8.074 0 0 0-.51 2.67C1.012 8.638 1 9.013 1 12s.013 3.362.066 4.535a8.074 8.074 0 0 0 .511 2.67 5.392 5.392 0 0 0 1.27 1.949 5.392 5.392 0 0 0 1.948 1.269 8.074 8.074 0 0 0 2.67.51C8.638 22.988 9.013 23 12 23s3.362-.013 4.535-.066a8.074 8.074 0 0 0 2.67-.511 5.625 5.625 0 0 0 3.218-3.218 8.074 8.074 0 0 0 .51-2.67C22.988 15.362 23 14.987 23 12s-.013-3.362-.066-4.535a8.074 8.074 0 0 0-.511-2.67 5.392 5.392 0 0 0-1.27-1.949 5.392 5.392 0 0 0-1.948-1.269 8.074 8.074 0 0 0-2.67-.51C15.362 1.012 14.987 1 12 1Zm0 5.351A5.649 5.649 0 1 0 17.649 12 5.649 5.649 0 0 0 12 6.351Zm0 9.316A3.667 3.667 0 1 1 15.667 12 3.667 3.667 0 0 1 12 15.667Zm5.872-10.859a1.32 1.32 0 1 0 1.32 1.32 1.32 1.32 0 0 0-1.32-1.32Z'></path></svg></a>
+
+<a href="https://nfsfu234-form-validation.netlify.app/" target="_blank" title="NFSFU234 Form Validation library Website" style="color: lightblue; margin: 0 5px"><svg xmlns='http://www.w3.org/2000/svg' fill="currentcolor" height='30' width='30' role='img' viewBox='0 0 16 16'><path d='M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z'/></svg></a>
+
+<a href="mailto:nf.validator234@gmail.com" target="_blank" title="Send NFSFU234 Form Validation library a mail" style="color: lightblue; margin: 0 5px"><svg xmlns='http://www.w3.org/2000/svg' fill="currentcolor" height='30' width='30' role='img' viewBox='0 0 16 16'><path d='M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z'/></svg></a>
+
+</div>
 
 ### Table of Contents 📑
 - [Description](#🚀-description)
 - [Installation](#🛠️-installation)
   - [Using The CDN URL](#☁️-using-the-cdn-url)
-  - [Install via npm](#⚙️-install-it-via-npm)
+  - [Install via Console](#⚙️-install-it-via-console)
 - [Usage](#🚀-usage)
   - [Browser Usage](#🚀-usage)
   - [Node.js Usage](#using-nfsf234-form-validation-library-in-nodejs-application)
@@ -56,22 +71,35 @@ To use the library in your project, there are two ways to include NFSF234 Form V
 If you're looking to employ the form validation library in your browser environment, simply include the following URLs within the `<head>` tag of your HTML code:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/nfsfu234-form-validation@2.3.0-patch/dist/css/nfsfu234FormValidation.min.css">
-<script src="https://unpkg.com/nfsfu234-form-validation@2.3.0-patch/dist/js/nfsfu234FormValidation.js"></script>
+<!-- NFSFU234 Form Validation CSS File -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nfsfu234-form-validation@latest/dist/css/nfsfu234FormValidation.min.css">
+<!-- NFSFU234 Form Validation JS File -->
+<script src="https://cdn.jsdelivr.net/npm/nfsfu234-form-validation@latest/dist/js/nfsfu234FormValidation.js"></script>
 ```
 
 This way, your browser-based project can readily harness the capabilities of the NFSFU234 Form Validation library. 🌐📦
 
-## ⚙️ Install it via npm:
+## ⚙️ Install it via console:
 
-If your preferred method involves npm, follow these simple steps to integrate the NFSFU234 Form Validation library into your project:
+If your preferred method involves `npm`, `yarn` or _____ follow these simple steps to integrate the NFSFU234 Form Validation library into your project:
 
 1. In your terminal, navigate to the desired project directory.
+
+### NPM
 
 2. Execute the following npm command to install the library:
 
 ```bash
 npm install nfsfu234-form-validation --save
+```
+### YARN
+
+2. Execute the following yarn command to install the library:
+
+```bash
+
+yarn add nfsfu234-form-validation
+
 ```
 
 By executing this command, you're well on your way to enjoying the benefits of the NFSFU234 Form Validation library. 📦🚀
@@ -139,7 +167,7 @@ Here you'll find a compilation of functions available within the NFSFU234 Form V
 | 2  | [formValidator.validate():boolean](#validateboolean) | `formValidator.validate();` | Checks and validate all the input elements (inputs, textareas, select, checkboxs, etc) | ✅ | ❌ |
 | 3  | [`ajax(AJAXOptions: Object): Promise`](#ajaxajaxoptions-object-promise)            | `formValidator.ajax(AJAXOptions)`     | Makes an AJAX request using the provided options and returns a Promise with the server's response.                           | ✅               | ✅                          |
 | 4  | [`getAJAXResponse(): Promise`](#getajaxresponse-promise--false)            | `formValidator.getAJAXResponse();`     | Retrieves the response from the last AJAX request made using the `ajax` function. It returns a Promise if available, or false if the AJAX request has been resolved.                          | ✅               | ✅                          |
-| 5  | [`generateRandomPassword(): string`](#generaterandompassword-string) | `formValidator.generateRandomPassword(12, true)` | Generates a random password with the specified length and optional inclusion of special characters. | ✅ | ✅ |
+| 5  | [`generateRandomPassword(): string`](#generaterandompassword-string) | `formValidator.generateRandomPassword()` | Generates a random password with length between 8 - 16 characters. | ✅ | ✅ |
 | 6  | [`checkPassword(password: string, shouldIncludeSymbol: bool): boolean`](#checkpasswordpassword-string-shouldincludesymbol-bool-boolean) | `formValidator.checkPassword('StrongP@ssword123', true)` | Checks the strength of the provided password against criteria like minimum length, character types, and optional symbol inclusion. | ✅ | ✅ |
 | 7  | [`isEmail(email: string): boolean`](#isemailemail-string-boolean)   | `formValidator.isEmail('example@example.com')`         | Checks if the given email is in a valid email format.                          | ✅               | ✅                         |
 | 8  | [`isURL(url: string): boolean`](#isurlurl-string-boolean)       | `formValidator.isURL('https://www.example.com')`       | Checks if the given string is a valid URL.                                    | ✅               | ✅                         |
@@ -165,6 +193,11 @@ Here you'll find a compilation of functions available within the NFSFU234 Form V
 | 28 | [loading(message:string, submitBtn: HTM,String)](#loadingmessage-submitbtn--nullbool) | `formValidator.loading("Loading...", "submitBtnId")` | Displays a loading message for your button | ✅ | ❌|
 | 29 | [isOnline()](#isonline-boolean) | formValidator.`isOnline()` | Checks if your browser's online 🌐 | ✅ | ❌ |
 | 30 | [reset(form?: HTMLFormElement)](#resetform-htmlformelement-boolean) | `formValidator.reset()` | Reset form inputs and selections 🔄 | ✅ | ❌ |
+| 31 | [verifyPassword(password1: string, password2: string, isHashed = false): Promise<boolean>](#verifypasswordpassword1-string-password2-string-ishashed--false-promiseboolean) | `formValidator.verifyPassword('userInputPassword', 'hashedStoredPassword', true)` |Asynchronously compares two passwords, supporting both hashed and plaintext formats. Uses bcrypt.compare for hashed passwords and direct comparison for plaintext. Resolves to true if passwords match; otherwise, returns false or an error. | ✅ | ✅ |
+| 32 | [getFormDetails(HTML Element form): Object<boolean>](#getformdetailsform-htmlformelement) | `formValidator.getFormDetails(form)` | Fetches all values of the inputs with a `name` or  `data-attr-name` HTML attributes on a form element like input, select, textareas, etc.  | ✅ | ❌ |
+
+
+
 
 
 
@@ -230,10 +263,10 @@ console.log(isValidZipcode); // true or false
 
 ### `generateRandomPassword(): string`
 
-The `generateRandomPassword` function generates a random password between the length of 8 and 20 and it will return the password generated.
+The `generateRandomPassword` function generates a random password between the length of 8 and 16 and it will return the password generated.
 
 ```javascript
-const randomPassword = formValidator.generateRandomPassword(12, true);
+const randomPassword = formValidator.generateRandomPassword();
 console.log(randomPassword); // A random password of varying length between 8 and 16 with special characters
 ```
 
@@ -248,6 +281,41 @@ console.log(isStrongPassword); // true or false
 const isStrongPassword1 = formValidator.checkPassword('StrongP@ssword123', true);
 console.log(isStrongPassword1); // true or false
 ```
+
+### `verifyPassword(password1: string, password2: string, isHashed = false): Promise<boolean>`
+
+The `verifyPassword` function asynchronously compares two passwords, supporting both hashed and plaintext passwords. If `isHashed` is true, it uses `bcrypt.compare` to compare hashed passwords. If `isHashed` is false, it directly compares plaintext passwords. Returns a Promise resolving to true if passwords match, and false otherwise or in case of an error.
+
+```javascript
+(async () => {
+    try {
+        const isPasswordMatch = await formValidator.verifyPassword(password, password2);
+        console.log( isPasswordMatch); // true or false
+    } catch (error) {
+        console.error(error);
+    }
+})();  
+```
+
+### `getFormDetails(form: HTMLFormElement)`
+
+Fetches all values of the inputs with a `name` or  `data-attr-name` HTML attributes on a form element like input, select, textareas, etc.
+
+```javascript
+
+// Using the default form you passed at creating the instance
+const myFormDetails = formValidator.getFormDetails();
+console.log(myFormDetails); // Logs either an object or false
+
+// OR
+
+// Using a diffrent form than the one you created or passed in your instance.
+const form = document.getElementById('myForm');
+const myFormDetails = formValidator.getFormDetails(form);
+console.log(myFormDetails); // Logs either an object or false
+
+```
+
 
 ### `togglePasswordVisibility(icons: Object, form: HTMLFormElement or string)`
 
@@ -318,7 +386,7 @@ formValidator.ajax(AJAXOptions)
 
 (async () => {
     try {
-        const response = await formValidator.ajax(ajaxOptions);
+        const response = await formValidator.ajax(AJAXOptions);
         console.log(response);
     } catch (error) {
         console.error(error);
@@ -796,7 +864,7 @@ console.log('Is Valid URL:', isValidURL);
 // ... More function usages
 ```
 
-For more functions you can use in your `Node.js` application, kindly vist the [`Node.js Column in the Available Functions in NFSFU234 Form Validation Library Table`](#available-functions-in-nfsfu234-form-validation-library)
+For more functions you can use in your `Node.js` application, kindly vist the [`Node.js Column in the Available Functions in NFSFU234 Form Validation Library Table`](#📚-available-functions-in-nfsfu234-form-validation-library)
 
 ## License 📜
 
@@ -825,7 +893,7 @@ Your trust and support mean the world to me. Together, let's make the web a more
 
 ## Support 🤝
 
-If you have any queries, questions, or simply need assistance, don't hesitate to reach out to me at nforshifu234.dev@gmail.com. You can also connect with me on social media @nforshifu234dev. I'm here to help and ensure your experience with NFSFU234 Form Validation is as smooth as possible! 💬📧
+If you have any queries, questions, or simply need assistance, don't hesitate to reach out at `nf.validator234@gmail.com`. You can also connect on social media `@nf_validator234`. I'm here to help and ensure your experience with NFSFU234 Form Validation is as smooth as possible! 💬📧
 
 ---
 

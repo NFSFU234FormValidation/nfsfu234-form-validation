@@ -1,3 +1,5 @@
+![Banner](images/IMG-d09df89sdfc0879sf08.png)
+
 # Contributing to NFSFU234FormValidation Library
 
 Thank you for considering contributing to the NFSFU234FormValidation library! Contributions from the community help improve the library and make it even more valuable.
@@ -47,6 +49,9 @@ Please follow the existing code style and conventions used in the library.
 ## Issues
 
 If you encounter any issues or have ideas for improvements, feel free to open an issue on the GitHub repository. Make sure to provide as much detail as possible about the problem or suggestion.
+
+## Contact
+If you need any assistance or want to ask for clarity. You can contact via any of our social media handles at `nf_validator234` or send an <a href="mailto:nf.validator234@gmail.com">email</a> or contact `@nforshifu234dev` on any of the social media.
 
 ## License
 

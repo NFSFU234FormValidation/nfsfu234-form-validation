@@ -47,6 +47,12 @@
     color: var(--failure) !important;           /* Set text color to the defined failure color */
   }
   
+  /* Utility class for input focus with success */
+  .input-focus-success {
+    border: 1px solid var(--success) !important; /* Set border color to the defined failure color */
+    color: var(--success) !important;           /* Set text color to the defined failure color */
+  }
+  
   /* Utility class for inline error message */
   .js-inline-message {
     color: var(--failure);         /* Set text color to the defined failure color */
@@ -145,6 +151,13 @@
   .js-spin
   {
     animation: spin 1s infinite linear; /* Apply the spinning animation */
+  }
+
+  svg.spin, 
+  svg.js-spin
+  {
+    width: 25px;
+    height: 25px;
   }
   
   /* Styling for show password button */

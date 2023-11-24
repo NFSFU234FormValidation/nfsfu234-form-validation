@@ -117,14 +117,15 @@ const bcrypt = require('bcryptjs');
         }
   
 
-        // Check if a given string is a valid URL starting with 'http://' or 'https://'.
-        _isURL( url) {
+        _isURL(url) {
             // Regular expression to check for 'http://' or 'https://' at the beginning
-            const urlPattern = /^(http:\/\/|https:\/\/)/i;
+            // and support formats like https://www.domain.com/ or https://domain.com/ or https://www.domain.com/?param1=1&param2=2
+            const urlPattern = /^(https?:\/\/)?(www\.)?[a-zA-Z0-9-]+\.[a-zA-Z]{2,}(:\d{1,5})?(\/[^\s]*)?(\?.*)?$/;
+        
             // If the input is a string, test it against the regular expression.
-            return (typeof url === 'string') ? urlPattern.test(url) : false;
+            return typeof url === 'string' ? urlPattern.test(url) : false;
         }
-
+        
         /**
          * Checks the data type of a variable and returns the corresponding type as a string.
          *
@@ -438,6 +439,38 @@ const bcrypt = require('bcryptjs');
             return true;
         }
 
+        /**
+         * Asynchronously verifies if two passwords match, supporting both hashed and plaintext passwords.
+         *
+         * @param {string} password1 - The first password for comparison.
+         * @param {string} password2 - The second password for comparison.
+         * @param {boolean} isHashed - A flag indicating whether the passwords are hashed.
+         *                             If true, uses bcrypt.compare for comparison; otherwise, compares plaintext.
+         * @returns {boolean} - Returns true if passwords match, false otherwise or in case of an error.
+         */
+        async _verifyPassword(password1, password2, isHashed = false) {
+            // If the password is hashed, use bcrypt.compare to compare hashed passwords.
+            if (isHashed) {
+                try {
+                    const match = await bcrypt.compare(password1, password2);
+                    return match; // Return the result of the comparison.
+                } catch (error) {
+                    console.error("Error Comparing Passwords: ", error); // Log an error if bcrypt.compare encounters an issue.
+                    return false; // Return false in case of an error.
+                }
+            }
+            // If passwords are not hashed, compare them directly.
+            else if (!isHashed) {
+                // If plaintext passwords don't match, return false.
+                if (password1 !== password2) {
+                    return false;
+                }
+                // If plaintext passwords match, return true.
+                return true;
+            }
+
+            return false; // Default return false if neither condition is met.
+        }
 
         _countString(string) 
         {
@@ -647,12 +680,7 @@ const bcrypt = require('bcryptjs');
 
             let errorMessage;
 
-            // Check if the form exists; otherwise, log an error to the console and return false
-            if (!form) {
-                errorMessage = 'Check the form you are trying to validate';
-                console.error(errorMessage);
-                return false;
-            }
+            form =  ( form && form !== '' ) ? form : this._form;
 
             // A list to keep track of whether the extraction process for different elements was successful
             var shouldContinue = [];
@@ -672,7 +700,7 @@ const bcrypt = require('bcryptjs');
             if (allInputsInForm.length > 0) {
 
                 allInputsInForm.forEach((input, index) => {
-                    var attributeName = (input.getAttribute('data-attr-name')) ? input.getAttribute('data-attr-name') : index;
+                    var attributeName = (input.getAttribute('data-attr-name')) ? input.getAttribute('data-attr-name') : (input.getAttribute('name')) ? input.getAttribute('name') : index;
                     var inputValue = input.value;
 
                     if ( input.getAttribute('type') === 'checkbox' )
@@ -751,6 +779,7 @@ const bcrypt = require('bcryptjs');
             }
 
         }
+
 
         /**
          * Validate Form
@@ -2007,6 +2036,34 @@ const bcrypt = require('bcryptjs');
             });
 
             return true;
+        }
+
+         /**
+         * Asynchronously verifies if two passwords match, providing a clear and simple interface.
+         *
+         * @param {string} password1 - The first password for comparison.
+         * @param {string} password2 - The second password for comparison.
+         * @param {boolean} isHashed - A flag indicating whether the passwords are hashed.
+         *                             If true, uses bcrypt.compare for comparison; otherwise, compares plaintext.
+         * @returns {boolean} - Returns true if passwords match, false otherwise or in case of an error.
+         */
+        async verifyPassword(password1, password2, isHashed = false) {
+            return await this._verifyPassword(password1, password2, isHashed);
+        }
+
+                /**
+         * getFormDetails
+         *
+         * This function retrieves data from the provided form element.
+         * It collects data from input fields, textareas, and select elements with the specified attribute 'data-attr-name'.
+         * The collected data is stored in an object with attribute names as keys and corresponding input values as values.
+         *
+         * @param {HTMLElement} form - The HTML form element from which to extract data.
+         * @returns {Object|boolean} - Returns an object containing form data if successful, or false if the form is not valid or no data is found.
+         */
+        getFormDetails(form)
+        {
+            return this._getFormDetails(form);
         }
 
 
