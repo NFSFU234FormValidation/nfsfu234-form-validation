@@ -1,16 +1,40 @@
 # Changelog
 
+## [2.3.1] - 2023-10-25
+
+### Information 🥳🥂
+
+- You can now follow `NFSFU234 Form Validation Library` on [X (Formerly Twitter)](https://x.com/nf_validator234/) and [Instagram](https://www.instagram.com/nf_validator234/). The username is  `nf_validator234`. 
+
+- Also you can send an email to `nf.validator234@gmail.com`
+
+### Added
+
+- [verifyPassword()](ReadMe.md#verifypasswordpassword1-string-password2-string-ishashed--false-promiseboolean). Asynchronously compares two passwords, supporting both hashed and plaintext formats. More information in the ReadMe file.
+
+- [getFormDetails()](ReadMe.md#getformdetailsform-htmlformelement). It gets the values of all form elements in a form. Be it inputs, textareas, selects or even checkboks & radio elements. Find More information in the ReadMe file num
+
+### Changed
+
+- Updated the `babel`, `jest` and `webpack` packages to versions `7.23.3`, `29.7.0`, and `5.89.0` respectively
+
+- New instructions to install NFSFU234 Form Validation Library via `npm`, `yarn` in the [Installation Section]()
+
+- Updated the documentation for the illustration for how to use the `generateRandomPassword()` function . Removed the parameters from the illustration because this function does not allow parameters yet.
+
+- Updated the `isURL()` function to properly check and validate URLS.
+
+- Updated the private function , `_getFormDetails()` function. The function could only get form data based on only if the form element has the `data-attr-name` attribute. Then i thought to myself since a lot of forms use the name attribute why not add that attribute to the list. Find out more information in the `getFormDetails()` function that has been made visible
+
+
+### Removed
+- Removed the Independence Day Banner.
 
 ## [2.3.0-patch] - 2023-10-01
 
 ### Fixed
 - Fixed the error of the new features `isOnline()` and `reset()` is not working in the initial `v2.3.0`.
 ## [2.3.0] - 2023-10-01
-
-# 🚀 **Happy Independence Day!** 🇳🇬
-![Independence Day Banner](images/Nigeria-Independence-Day-NFSFU234FormValidationBanner.png)
-
-Celebrate this special day with my latest release!
 
 ### Added
 - Added `isOnline()` function to check if a browser is connected to the internet or not
@@ -19,10 +43,9 @@ Celebrate this special day with my latest release!
 ### Changed
 - Added comments to describe the `loading()` function released in the previous version(`v2.2.0`) in the `nfsfu234-form-validation.js` file located in the `src` folder
 
-- Reviewd and edited the `displayError() function`list details in the `web/json/function-list.json` file,
+- Reviewd and edited the `displayError() function` list details in the `web/json/function-list.json` file,
 
 
-Stay tuned for more updates and enjoy your Independence Day!
 
 ## [2.2.0] - 2023-09-25
 
@@ -30,7 +53,7 @@ Stay tuned for more updates and enjoy your Independence Day!
 
 - Added `loading()` function, this function is used to add your loading message incase you wished to have a custom loading animation or text if you choose not to use the defualt submit function. This function takes 2 parameters. See more information in the [ReadMe](ReadMe)
 
-- Added a new HTML class, `js-spin` to be add to the previous `spin` class for adding sping effect to an element.
+- Added a new HTML class, `js-spin` to be added to the previous `spin` class for adding spining effect to an element.
 
 ## [2.1.0] - 2023-09-09
 ### Added
@@ -41,7 +64,7 @@ Stay tuned for more updates and enjoy your Independence Day!
 - Renamed the minified CSS output file from `nfsfu234-formValidation.min.css` to `nfsfu234FormValidation.min.css`, impacting how users refrence the minified CSS 
 
 ### Other Changes
-- Updated the banner from the versioning banner to a more staticand elegant banner.
+- Updated the banner from the versioning banner to a more static and elegant banner.
 
 ## [1.2.4] - 2023-08-26
 
