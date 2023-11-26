@@ -1,5 +1,21 @@
 # Changelog
 
+## [2.3.2] - 2023-10-27
+
+### Added
+
+- none
+
+### Changed
+
+- Modified the ReadMe.md file
+- Modified the function call attribute for `verifyPassword()` function.
+- Modified the `_togglePasswordVisibility()` function to ensure more flexiblity to icon display during toggling more than one password input feild
+- Updated the `_getFormDetails()`. In the previous version, only inputs feilds were affected with the updates but now all for elements `inputs`, `textareas`, `select`.
+
+### Removed
+- none
+
 ## [2.3.1] - 2023-10-25
 
 ### Information 🥳🥂

@@ -43,3 +43,4 @@ secrets.json
 # Ignoring the File With the List of Pending Updates
 Update_List.md
 CDN_JS.md
+cdn.json

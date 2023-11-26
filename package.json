@@ -2,7 +2,7 @@
   "name": "nfsfu234-form-validation",
   "author": "NFORSHIFU234 Dev || Shifu-Nfor Nyuiring-yoh Rhagninyui",
   "homepage": "https://nfsfu234-form-validation.netlify.app/",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "config": {
     "version_short": "2.3"
   },
@@ -53,7 +53,7 @@
     }
   },
   "devDependencies": {
-    "nfsfu234-form-validation": "^2.3.1",
+    "nfsfu234-form-validation": "^2.3.2",
     "@babel/core": "^7.23.3",
     "@babel/preset-env": "^7.23.3",
     "babel-loader": "^9.1.3",

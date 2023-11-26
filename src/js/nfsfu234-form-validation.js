@@ -521,11 +521,17 @@ const bcrypt = require('bcryptjs');
 
                         // Update the visibility icon based on the current input type.
                         if (inputType === 'password') {
-                            iconContainer.innerHTML = hideIcon;
+                            allVisibilityIconContainer.forEach(iconCont => {
+                                iconCont.innerHTML = hideIcon;
+                            });
                         } else if (inputType === 'text') {
-                            iconContainer.innerHTML = showIcon;
+                            allVisibilityIconContainer.forEach(iconCont => {
+                                iconCont.innerHTML = showIcon;
+                            });
                         } else {
-                            iconContainer.innerHTML = showIcon;
+                            allVisibilityIconContainer.forEach(iconCont => {
+                                iconCont.innerHTML = showIcon;
+                            });
                         }
                     });
                 });
@@ -739,7 +745,7 @@ const bcrypt = require('bcryptjs');
             if (allTextareasInForm.length > 0) {
 
                 allTextareasInForm.forEach((textarea) => {
-                    var attributeName = textarea.getAttribute('data-attr-name');
+                    var attributeName = (input.getAttribute('data-attr-name')) ? input.getAttribute('data-attr-name') : (input.getAttribute('name')) ? input.getAttribute('name') : index;
                     const textareaValue = textarea.value;
 
                     // Check if the attribute name exists and is not null, NaN, or undefined
@@ -757,7 +763,8 @@ const bcrypt = require('bcryptjs');
             if (allSelectsInForm.length > 0) {
 
                 allSelectsInForm.forEach((select) => {
-                    var attributeName = select.getAttribute('data-attr-name');
+                    var attributeName = (input.getAttribute('data-attr-name')) ? input.getAttribute('data-attr-name') : (input.getAttribute('name')) ? input.getAttribute('name') : index;
+
                     const selectValue = select.value;
 
                     // Check if the attribute name exists and is not null, NaN, or undefined
