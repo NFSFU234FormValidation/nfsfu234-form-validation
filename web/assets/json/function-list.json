@@ -211,7 +211,7 @@
     },
     {
       "Function Name": "verifyPassword(password1: string, password2: string, isHashed = false): Promise<boolean>",
-      "How to Call": "const isPasswordMatch = await userAuthenticator.verifyPassword('userInputPassword', 'hashedStoredPassword', true); // Verifies if the provided password matches the stored hashed password",
+      "How to Call": "(async () => { try { const isPasswordMatch = await formValidator.verifyPassword(password, password2); console.log( isPasswordMatch ); // logs true or false } catch (error) { console.error(error);})();",
       "Description": "The verifyPassword function asynchronously compares two passwords, supporting both hashed and plaintext passwords. If isHashed is true, it uses bcrypt.compare to compare hashed passwords. If isHashed is false, it directly compares plaintext passwords. Returns a Promise resolving to true if passwords match, and false otherwise or in case of an error.",
       "Browser Supported": "✅",
       "Console Supported (Node.js)": "✅"

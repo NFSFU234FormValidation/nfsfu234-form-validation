@@ -71,17 +71,18 @@ To use the library in your project, there are two ways to include NFSF234 Form V
 If you're looking to employ the form validation library in your browser environment, simply include the following URLs within the `<head>` tag of your HTML code:
 
 ```html
-<!-- NFSFU234 Form Validation CSS File -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nfsfu234-form-validation@latest/dist/css/nfsfu234FormValidation.min.css">
-<!-- NFSFU234 Form Validation JS File -->
-<script src="https://cdn.jsdelivr.net/npm/nfsfu234-form-validation@latest/dist/js/nfsfu234FormValidation.js"></script>
+<!-- NFSFU234FormValidation CSS CDN -->
+<link rel="stylesheet" href="https://www.jsdelivr.com/package/npm/nfsfu234-form-validation@latest/dist/css/nfsfu234FormValidation.min.css">
+
+<!-- NFSFU234FormValidation JS CDN -->
+<script src="https://www.jsdelivr.com/package/npm/nfsfu234-form-validation@latest/dist/js/nfsfu234FormValidation.js"></script>
 ```
 
 This way, your browser-based project can readily harness the capabilities of the NFSFU234 Form Validation library. 🌐📦
 
 ## ⚙️ Install it via console:
 
-If your preferred method involves `npm`, `yarn` or _____ follow these simple steps to integrate the NFSFU234 Form Validation library into your project:
+If your preferred method involves `npm`, `yarn`follow these simple steps to integrate the NFSFU234 Form Validation library into your project:
 
 1. In your terminal, navigate to the desired project directory.
 
