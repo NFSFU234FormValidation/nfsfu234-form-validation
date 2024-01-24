@@ -684,6 +684,8 @@ const bcrypt = require('bcryptjs');
         _getFormDetails(form)
         {
 
+            console.log(form);
+
             let errorMessage;
 
             form =  ( form && form !== '' ) ? form : this._form;
@@ -744,8 +746,8 @@ const bcrypt = require('bcryptjs');
             // Extract data from textarea tags in the form
             if (allTextareasInForm.length > 0) {
 
-                allTextareasInForm.forEach((textarea) => {
-                    var attributeName = (input.getAttribute('data-attr-name')) ? input.getAttribute('data-attr-name') : (input.getAttribute('name')) ? input.getAttribute('name') : index;
+                allTextareasInForm.forEach((textarea, index) => {
+                    var attributeName = (textarea.getAttribute('data-attr-name')) ? textarea.getAttribute('data-attr-name') : (textarea.getAttribute('name')) ? textarea.getAttribute('name') : index;
                     const textareaValue = textarea.value;
 
                     // Check if the attribute name exists and is not null, NaN, or undefined
@@ -762,8 +764,8 @@ const bcrypt = require('bcryptjs');
             // Extract data from select tags in the form
             if (allSelectsInForm.length > 0) {
 
-                allSelectsInForm.forEach((select) => {
-                    var attributeName = (input.getAttribute('data-attr-name')) ? input.getAttribute('data-attr-name') : (input.getAttribute('name')) ? input.getAttribute('name') : index;
+                allSelectsInForm.forEach((select, index) => {
+                    var attributeName = (select.getAttribute('data-attr-name')) ? select.getAttribute('data-attr-name') : (select.getAttribute('name')) ? select.getAttribute('name') : index;
 
                     const selectValue = select.value;
 
@@ -989,6 +991,7 @@ const bcrypt = require('bcryptjs');
                     this._form.querySelector('button[type=submit]') ||
                     this._form.querySelector('input[type=submit]') ||
                     this._form.querySelector('#jsSubmit') ||
+                    this._form.querySelector('input[type=search]') ||
                     this._form.querySelector('button') ||
                     false;
             } else {
@@ -1099,7 +1102,7 @@ const bcrypt = require('bcryptjs');
                 });
             } else {
                 // If no submit button is found, log an error and return false
-                console.error("No Submit Button was found. Refer to NFORSHIFU234 FORM Validation documentation at http://documentation.nforshifu.com/");
+                console.error("No Submit Button was found.");
                 return false;
             }
 
@@ -1369,6 +1372,10 @@ const bcrypt = require('bcryptjs');
             {
                 errorMessage = ( customErrorMessages && customErrorMessages['datetime'] && customErrorMessages['datetime'] !== '' ) ? customErrorMessages['datetime'] : ( this._customErrorMessages && this._customErrorMessages['datetime'] && this._customErrorMessages['datetime'] !== '' ) ? this._customErrorMessages['datetime']  : "you have to choose a date and time";
             }
+            else if ( inputFeildType === 'date' && isRequired &&  inputValue.length === 0   )
+            {
+                errorMessage = ( customErrorMessages && customErrorMessages['date'] && customErrorMessages['date'] !== '' ) ? customErrorMessages['date'] : ( this._customErrorMessages && this._customErrorMessages['date'] && this._customErrorMessages['date'] !== '' ) ? this._customErrorMessages['date']  : "you have to choose a date";
+            }
             else if ( inputFeildType === 'datetime-local' && isRequired &&  inputValue.length === 0   )
             {
                 errorMessage = ( customErrorMessages && customErrorMessages['datetime-local'] && customErrorMessages['datetime-local'] !== '' ) ? customErrorMessages['datetime-local'] : ( this._customErrorMessages && this._customErrorMessages['datetime-local'] && this._customErrorMessages['datetime-local'] !== '' ) ? this._customErrorMessages['datetime-local']  : "you have to choose a date and time locally";
@@ -1419,7 +1426,7 @@ const bcrypt = require('bcryptjs');
             }
             else if ( inputFeildType === 'url' && isRequired &&  inputValue.length === 0   )
             {
-                errorMessage = ( customErrorMessages && customErrorMessages['url'] && customErrorMessages['url']['empty'] && customErrorMessages['url']['empty'] !== '' ) ? customErrorMessages['url']['empty'] : ( this._customErrorMessages && this._customErrorMessages['url'] && this._customErrorMessages['url']['empty'] && this._customErrorMessages['url']['empty'] !== '' ) ? this._customErrorMessages['url']['empty']  : "choose time";
+                errorMessage = ( customErrorMessages && customErrorMessages['url'] && customErrorMessages['url']['empty'] && customErrorMessages['url']['empty'] !== '' ) ? customErrorMessages['url']['empty'] : ( this._customErrorMessages && this._customErrorMessages['url'] && this._customErrorMessages['url']['empty'] && this._customErrorMessages['url']['empty'] !== '' ) ? this._customErrorMessages['url']['empty']  : "Enter or paste a link";
             }
             else if ( inputFeildType === 'week' && isRequired &&  inputValue.length === 0   )
             {
@@ -2072,6 +2079,32 @@ const bcrypt = require('bcryptjs');
         {
             return this._getFormDetails(form);
         }
+
+        /**
+         * Redirects the user to a specified URL, either immediately or after a specified delay.
+         *
+         * If the code is running in a browser environment, it uses window.location.href for redirection.
+         * In a non-browser environment (e.g., Node.js console), it logs a message indicating the redirection.
+         *
+         * @param {string} [url=this.getPageUrl()] - An optional URL to which the user should be redirected.
+         *                                           Defaults to the current page's URL if not provided.
+         * @param {number} [delay=0] - An optional parameter to delay redirection in seconds.
+         */
+        redirect(url = this.getPageUrl(), delay = 0) {
+            // Check if the code is running in a browser environment
+            if (typeof window !== 'undefined') {
+                // Redirect in a browser environment after the specified delay
+                setTimeout(() => {
+                    window.location.href = url;
+                }, delay * 1000); // Convert seconds to milliseconds
+            } else {
+                // Running in a non-browser environment (e.g., Node.js console)
+                console.log(`Redirecting to: ${url || 'current page'} (Delayed: ${delay} seconds)`);
+            }
+        }
+
+
+
 
 
 

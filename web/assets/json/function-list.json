@@ -222,6 +222,13 @@
       "Description": "Fetches all values of the inputs with a `name` or  `data-attr-name` HTML attributes on a form element like input, select, textareas, etc.",
       "Browser Supported": "✅",
       "Console Supported (Node.js)": "❌"
+    },
+    {
+      "Function Name": "redirect(string [url=this.getPageUrl()], [number delay=0])",
+      "How to Call": "formValidator.redirect('https://example.com', 3); // Redirects to 'https://example.com' after a 3-second delay",
+      "Description": "takes an optional `url` parameter, defaulting to the current page's URL if not provided, and an optional `delay` parameter, defaulting to 0 seconds.",
+      "Browser Supported": "✅",
+      "Console Supported (Node.js)": "❌"
     }
     
     

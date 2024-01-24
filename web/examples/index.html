@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="../assets/images/NFORSHIFU234_Dev_Logo.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Load NFSFU234FormValidation Library -->
+    <script src="https://cdn.jsdelivr.net/npm/nfsfu234-form-validation@latest/dist/js/nfsfu234FormValidation.js"></script>
+    <script src="../assets/js/script.js"></script>
+
+    <script> const ajaxOptions = { url: 'https://cdn.jsdelivr.net/npm/nfsfu234-form-validation@latest/package.json', RequestMethod: 'GET', }; const NFSFU234FormValidationLibrary = new NFSFU234FormValidation(); (async () => { try { 
+        const response = await NFSFU234FormValidationLibrary.ajax(ajaxOptions); 
+        const title = `${ response.name.toUpperCase() } - v${response.version}`; 
+        document.title = title; 
+        document.querySelectorAll('script')[1].remove(); 
+
+        let metaData = `<meta name="title" content="${title}">
+        <meta name="description" content="${response.description}">
+        <meta name="url" content="${window.location.href}">
+        <meta name="author" content="${response.author}">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="${window.location.href}">
+        <meta property="og:title" content="${title}">
+        <meta property="og:description" content="${response.description}">
+        <meta property="og:image" content="assets/images/IMG-d09df89sdfc0879sf08.png">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="${window.location.href}">
+        <meta property="twitter:title" content="${title}">
+        <meta property="twitter:description" content="${response.description}">
+        <meta property="twitter:image" content="assets/images/IMG-d09df89sdfc0879sf08.png">`; 
+
+        document.querySelector('head').innerHTML = document.querySelector('head').innerHTML +  metaData;
+
+        document.querySelectorAll('.js-name').forEach( (item)=>{ item.innerHTML = response.name.toUpperCase()  } );
+        document.querySelectorAll('.js-version').forEach( (item)=>{ item.innerHTML = response.version  } );
+        document.querySelectorAll('.js-license').forEach( (item)=>{ item.innerHTML = response.license  } );
+        document.querySelectorAll('.js-description').forEach( (item)=>{ item.innerHTML = response.description  } );
+        document.querySelectorAll('.js-author').forEach( (item)=>{ item.innerHTML = response.author  } );
+
+        document.querySelector('.loader').classList.add('display-none-force');
+
+        } catch (error) { console.error(error); } })(); 
+    </script>
+
+    <style>
+        .responsive-menu
+        {
+            display: flex;
+            width: 100%;
+        }
+        .right
+        {
+            padding-top: 100px;
+        }
+        .logo:hover
+        {
+            text-decoration: underline dotted !important;
+            text-decoration-color: blue !important;
+        }
+        .responsive-menu
+        {
+            justify-content: flex-start;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="loader">
+
+        <div class="logo">
+            <img src="../assets/images/NFORSHIFU234_Dev_Logo.png" alt="">
+        </div>
+
+        <div class="text">
+            Loading...
+        </div>
+
+    </div>
+    
+    <div class="container">
+
+
+        <div class="right">
+
+            <section class="projects">
+
+                <div class="contents">
+
+                    <div class="card">
+
+                        <div class="card-image">
+                            <img src="../assets/images/examples/_example1_.png" alt="NFSFU234FormValidation Example 1">
+                        </div>
+
+                        <div class="card-contents">
+
+                            <div class="title">
+                                example 1
+                            </div>
+
+                            <div class="description">
+                                This template was donwloaded from the Internet.
+                            </div>
+
+                            <div class="links">
+
+                                <a href="./example1/" target="_blank" class="link">
+                                    <div class="icon"><i class="fas fa-external-link"></i></div>
+                                    <div class="text">View Live</div>
+                                </a>
+
+                                <a href="zips/example1.zip" download="NFSFU234FormValidation_Example_1.zip" target="_blank" class="link">
+                                    <div class="icon"><i class="fa fa-cloud-download"></i></div>
+                                    <div class="text">Download</div>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card">
+
+                        <div class="card-image">
+                            <img src="../assets/images/examples/_example2_.png" alt="">
+                        </div>
+
+                        <div class="card-contents">
+
+                            <div class="title">
+                                example 2
+                            </div>
+
+                            <div class="description">
+                                This template was made by Colorlib (<a href="https://colorlib.com/" target="_blank" rel="noopener noreferrer">https://colorlib.com</a>)
+                            </div>
+
+                            <div class="links">
+
+                                <a href="./example2/" target="_blank" class="link">
+                                    <div class="icon"><i class="fas fa-external-link"></i></div>
+                                    <div class="text">View Live</div>
+                                </a>
+
+                                <a href="zips/example2.zip" download="NFSFU234FormValidation_Example_2.zip" target="_blank" class="link">
+                                    <div class="icon"><i class="fa fa-cloud-download"></i></div>
+                                    <div class="text">Download</div>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card">
+
+                        <div class="card-image">
+                            <img src="../assets/images/examples/_example3_.png" alt="">
+                        </div>
+
+                        <div class="card-contents">
+
+                            <div class="title">
+                                Example 3
+                            </div>
+
+                            <div class="description">
+                                This template was made by Colorlib (<a href="https://colorlib.com/" target="_blank" rel="noopener noreferrer">https://colorlib.com</a>)
+                            </div>
+
+                            <div class="links">
+
+                                <a href="./example3/" target="_blank" class="link">
+                                    <div class="icon"><i class="fas fa-external-link"></i></div>
+                                    <div class="text">View Live</div>
+                                </a>
+
+                                <a href="zips/example3.zip" download="NFSFU234FormValidation_Example_3.zip" target="_blank" class="link">
+                                    <div class="icon"><i class="fa fa-cloud-download"></i></div>
+                                    <div class="text">Download</div>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <footer>
+
+
+                <div class="footer-icons">
+                    
+                    <a href="https://x.com/nf_validator234/" target="_blank" rel="noopener noreferrer" title="NFSFU234FormValidation on X" class="footer-icon"><svg viewBox='0 0 24 24' aria-hidden='true' class='r-1cvl2hr r-4qtqp9 r-yyyyoo r-1r8g8re r-ywje51 r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-1acpoxo'><g><path d='M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z'></path></g></svg></a>
+                    <a href="https://www.instagram.com/nf_validator234/" target="_blank" rel="noopener noreferrer" title="NFSFU234FormValidation on Instagram" class="footer-icon"><svg aria-label='Instagram' class='x1lliihq x1n2onr6' height='24' role='img' viewBox='0 0 24 24' width='24'><title>Instagram</title><path d='M12 2.982c2.937 0 3.285.011 4.445.064a6.087 6.087 0 0 1 2.042.379 3.408 3.408 0 0 1 1.265.823 3.408 3.408 0 0 1 .823 1.265 6.087 6.087 0 0 1 .379 2.042c.053 1.16.064 1.508.064 4.445s-.011 3.285-.064 4.445a6.087 6.087 0 0 1-.379 2.042 3.643 3.643 0 0 1-2.088 2.088 6.087 6.087 0 0 1-2.042.379c-1.16.053-1.508.064-4.445.064s-3.285-.011-4.445-.064a6.087 6.087 0 0 1-2.043-.379 3.408 3.408 0 0 1-1.264-.823 3.408 3.408 0 0 1-.823-1.265 6.087 6.087 0 0 1-.379-2.042c-.053-1.16-.064-1.508-.064-4.445s.011-3.285.064-4.445a6.087 6.087 0 0 1 .379-2.042 3.408 3.408 0 0 1 .823-1.265 3.408 3.408 0 0 1 1.265-.823 6.087 6.087 0 0 1 2.042-.379c1.16-.053 1.508-.064 4.445-.064M12 1c-2.987 0-3.362.013-4.535.066a8.074 8.074 0 0 0-2.67.511 5.392 5.392 0 0 0-1.949 1.27 5.392 5.392 0 0 0-1.269 1.948 8.074 8.074 0 0 0-.51 2.67C1.012 8.638 1 9.013 1 12s.013 3.362.066 4.535a8.074 8.074 0 0 0 .511 2.67 5.392 5.392 0 0 0 1.27 1.949 5.392 5.392 0 0 0 1.948 1.269 8.074 8.074 0 0 0 2.67.51C8.638 22.988 9.013 23 12 23s3.362-.013 4.535-.066a8.074 8.074 0 0 0 2.67-.511 5.625 5.625 0 0 0 3.218-3.218 8.074 8.074 0 0 0 .51-2.67C22.988 15.362 23 14.987 23 12s-.013-3.362-.066-4.535a8.074 8.074 0 0 0-.511-2.67 5.392 5.392 0 0 0-1.27-1.949 5.392 5.392 0 0 0-1.948-1.269 8.074 8.074 0 0 0-2.67-.51C15.362 1.012 14.987 1 12 1Zm0 5.351A5.649 5.649 0 1 0 17.649 12 5.649 5.649 0 0 0 12 6.351Zm0 9.316A3.667 3.667 0 1 1 15.667 12 3.667 3.667 0 0 1 12 15.667Zm5.872-10.859a1.32 1.32 0 1 0 1.32 1.32 1.32 1.32 0 0 0-1.32-1.32Z'></path></svg></a>
+                    <a href="https://www.github.com/nforshifu234dev/nfsfu234-form-validation/" target="_blank" rel="noopener noreferrer" title="NFSFU234FormValidation GitHub Repo." class="footer-icon"><svg xmlns='http://www.w3.org/2000/svg' data-name='Layer 1' viewBox='0 0 24 24'><path d='M12,2.2467A10.00042,10.00042,0,0,0,8.83752,21.73419c.5.08752.6875-.21247.6875-.475,0-.23749-.01251-1.025-.01251-1.86249C7,19.85919,6.35,18.78423,6.15,18.22173A3.636,3.636,0,0,0,5.125,16.8092c-.35-.1875-.85-.65-.01251-.66248A2.00117,2.00117,0,0,1,6.65,17.17169a2.13742,2.13742,0,0,0,2.91248.825A2.10376,2.10376,0,0,1,10.2,16.65923c-2.225-.25-4.55-1.11254-4.55-4.9375a3.89187,3.89187,0,0,1,1.025-2.6875,3.59373,3.59373,0,0,1,.1-2.65s.83747-.26251,2.75,1.025a9.42747,9.42747,0,0,1,5,0c1.91248-1.3,2.75-1.025,2.75-1.025a3.59323,3.59323,0,0,1,.1,2.65,3.869,3.869,0,0,1,1.025,2.6875c0,3.83747-2.33752,4.6875-4.5625,4.9375a2.36814,2.36814,0,0,1,.675,1.85c0,1.33752-.01251,2.41248-.01251,2.75,0,.26251.1875.575.6875.475A10.0053,10.0053,0,0,0,12,2.2467Z'/></svg></a>
+                    <a href="mailto:nf.validator234@gmail.com" class="footer-icon" target="_blank" rel="noopener noreferrer" title="Send a mail to NFSFU234FormValidation"> <svg xmlns='http://www.w3.org/2000/svg'  width='16' height='16' fill='currentColor' class='bi bi-envelope' viewBox='0 0 16 16'><path d='M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z'/></svg></a>
+    
+                </div>
+
+                <div class="copyright">All Rights Reserved &copy; 2024. - <span class="js-author"></span> </div>
+
+
+            </footer>
+
+
+
+        </div>
+
+        <div class="responsive-menu">
+
+            <a href="../" class="logo">
+             NFSFU234FormValidation Library 📚  / 
+            </a>
+            <a href="../examples/" class="logo" style="color: #ffffff !important;">Examples</a>
+             
+        </div>
+
+    </div>
+
+</body>
+</html>
