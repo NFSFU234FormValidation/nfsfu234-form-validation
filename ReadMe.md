@@ -72,10 +72,10 @@ If you're looking to employ the form validation library in your browser environm
 
 ```html
 <!-- NFSFU234FormValidation CSS CDN -->
-<link rel="stylesheet" href="https://www.jsdelivr.com/package/npm/nfsfu234-form-validation@latest/dist/css/nfsfu234FormValidation.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nfsfu234-form-validation@latest/dist/css/nfsfu234FormValidation.min.css">
 
 <!-- NFSFU234FormValidation JS CDN -->
-<script src="https://www.jsdelivr.com/package/npm/nfsfu234-form-validation@latest/dist/js/nfsfu234FormValidation.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/nfsfu234-form-validation@latest/dist/js/nfsfu234FormValidation.js"></script>
 ```
 
 This way, your browser-based project can readily harness the capabilities of the NFSFU234 Form Validation library. 🌐📦
@@ -196,7 +196,7 @@ Here you'll find a compilation of functions available within the NFSFU234 Form V
 | 30 | [reset(form?: HTMLFormElement)](#resetform-htmlformelement-boolean) | `formValidator.reset()` | Reset form inputs and selections 🔄 | ✅ | ❌ |
 | 31 | [verifyPassword(password1: string, password2: string, isHashed = false): Promise<boolean>](#verifypasswordpassword1-string-password2-string-ishashed--false-promiseboolean) | `formValidator.verifyPassword('userInputPassword', 'hashedStoredPassword', true)` |Asynchronously compares two passwords, supporting both hashed and plaintext formats. Uses bcrypt.compare for hashed passwords and direct comparison for plaintext. Resolves to true if passwords match; otherwise, returns false or an error. | ✅ | ✅ |
 | 32 | [getFormDetails(HTML Element form): Object<boolean>](#getformdetailsform-htmlformelement) | `formValidator.getFormDetails(form)` | Fetches all values of the inputs with a `name` or  `data-attr-name` HTML attributes on a form element like input, select, textareas, etc.  | ✅ | ❌ |
-
+| 33 | [redirect(string [url=this.getPageUrl()], [number delay=0])](#redirectstring-urlthisgetpageurl-number-delay0) | `formValidator.redirect()` | Redirects the user to a specified URL, either immediately or after a specified delay. If running in a browser environment, it uses `window.location.href` for redirection. In a non-browser environment (e.g., Node.js console), it logs a message indicating the redirection. ❌ | ✅ |
 
 
 
@@ -833,6 +833,18 @@ const isResetSuccessful = formValidator.reset(); // Resets the internal form
 console.log(isResetSuccessful); // true or false
 
 ```
+
+### `redirect(string [url=this.getPageUrl()], [number delay=0])`
+
+The `redirect` function redirects the user to a specified URL, either immediately or after a specified delay. If running in a browser environment, it utilizes `window.location.href` for redirection. In a non-browser environment (e.g., Node.js console), it logs a message indicating the redirection.
+
+```javascript
+// Example Usage:
+formValidator.redirect("https://example.com", 3); // Redirects to "https://example.com" after a 3-second delay
+```
+
+This function takes an optional `url` parameter, defaulting to the current page's URL if not provided, and an optional `delay` parameter, defaulting to 0 seconds.
+
 
 
 ## Using NFSF234 Form Validation Library in Node.js Application

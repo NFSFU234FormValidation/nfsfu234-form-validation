@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="shortcut icon" href="images/nforshifu234dev.png" type="image/x-icon">
+		<meta charset="utf-8">
+		<title>RegistrationForm_v3 by Colorlib</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+		
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="css/style.css">
+
+	<!-- NFSFU234FormValidation Library CDN -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nfsfu234-form-validation@latest/dist/css/nfsfu234FormValidation.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/nfsfu234-form-validation@latest/dist/js/nfsfu234FormValidation.js"></script>
+
+	</head>
+
+	<body>
+
+		<div class="wrapper" style="background-image: url('images/bg-registration-form-3.jpg');">
+			<div class="inner">
+				<div id="myForm">
+					<h3>Registration Form</h3>
+					<div class="form-group">
+						<div class="form-wrapper">
+							<label for="">Username:</label>
+							<div class="form-holder">
+								<i class="zmdi zmdi-account-o"></i>
+								<input type="text" class="form-control js-required">
+							</div>
+						</div>
+						<div class="form-wrapper">
+							<label for="">Email:</label>
+							<div class="form-holder">
+								<i style="font-style: normal; font-size: 15px;">@</i>
+								<input type="email" class="form-control js-required" >
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="form-wrapper">
+							<label for="">Password:</label>
+							<div class="form-holder">
+								<i class="zmdi zmdi-lock-outline"></i>
+								<input type="password" class="form-control" placeholder="********" required>
+							</div>
+						</div>
+						<div class="form-wrapper">
+							<label for="">Repeat Password:</label>
+							<div class="form-holder">
+								<i class="zmdi zmdi-lock-outline"></i>
+								<input type="password" class="form-control" placeholder="********" required>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="form-wrapper">
+							<label for="">Country:</label>
+							<div class="form-holder select">
+								<select name="" id="" class="form-control" required>
+									<option value="">Choose a country</option>
+									<option value="united states">United States</option>
+									<option value="united kingdom">United Kingdom</option>
+									<option value="viet nam">Viet Nam</option>
+								</select>
+								<i class="zmdi zmdi-pin"></i>
+							</div>
+						</div>
+						<div class="form-wrapper">
+							<label for="">Gender:</label>
+							<div class="form-holder select">
+								<select name="" id="" class="form-control js-required">
+									<option value="male">Male</option>
+									<option value="femal">Female</option>
+									<option value="other">Other</option>
+								</select>
+								<i class="zmdi zmdi-face"></i>
+							</div>
+						</div>
+					</div>
+					<div class="form-end">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" class="js-required">By Clicking the <b>Register Now</b> button, you agree to the <a href="#">Terms & Conditions</a>
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="button-holder">
+							<button>Register Now</button>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/script.js"></script>
+		
+	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

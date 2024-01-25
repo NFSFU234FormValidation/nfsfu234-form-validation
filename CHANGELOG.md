@@ -1,6 +1,36 @@
 # Changelog
 
-## [2.3.2] - 2023-10-27
+## [2.4.2] - 2024-01-25
+
+## `Happy New Year - 20.24 👌🥂`
+
+### Added
+- Added `redirect()` function, used for redirecting a user to a specific url or path
+
+### Updated
+- Website UI has been updated.
+- `copy-webpack-plugin` was updated to `v12.0.2` from `v11.0.0`
+- `css-minimizer-webpack-plugin` was updated to `v6.0.0` from `5.0.1`
+
+### Changed 
+- Modified the `_getFormDetails()` function
+    - Fixed the bug, `formValidator.getFormDetails is not a function`. This was due to a bundling error during the rlease of `v2.3.2`
+    - Had to add `index` variable when selcting textareas, and select tags. It was returning errors in previous versions.
+
+- Modified the `_loading()` function
+    - Here I added the ability for the `loading()` function to select inut feilds with the type `search`
+
+- Modified the `submit()` function
+    - Modfied this function in the `else` part when checking if a `button` exists. The console error was a mess.
+
+- Modified the `validateInput()` function
+    - Modifed this function to be able to check for `date` type in any input feild.
+    - Modified this function to display the prorper error message if an input is of type `url` and is `required`
+
+### Removed 
+- None
+
+## [2.3.2] - 2023-11-27
 
 ### Added
 
@@ -16,7 +46,7 @@
 ### Removed
 - none
 
-## [2.3.1] - 2023-10-25
+## [2.3.1] - 2023-11-25
 
 ### Information 🥳🥂
 
