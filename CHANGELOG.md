@@ -1,8 +1,14 @@
 # Changelog
 
-## [2.4.2] - 2024-01-25
+## [2.4.3] - 2024-01-25
 
-## `Happy New Year - 20.24 👌🥂`
+
+## Important Note
+
+- When utilizing the `JsDelivr CDN URL` to access the `NFSFU234FormValidation Library` with the `@latest` tag, be aware that, in some instances, it might not include the latest updates. To ensure the inclusion of the most recent code, consider using the specific version number (e.g., 2.4.3).
+
+- This observation was made during the release of version `2.4.2`.
+
 
 ### Added
 - Added `redirect()` function, used for redirecting a user to a specific url or path
