@@ -684,8 +684,6 @@ const bcrypt = require('bcryptjs');
         _getFormDetails(form)
         {
 
-            console.log(form);
-
             let errorMessage;
 
             form =  ( form && form !== '' ) ? form : this._form;
@@ -2052,20 +2050,7 @@ const bcrypt = require('bcryptjs');
             return true;
         }
 
-         /**
-         * Asynchronously verifies if two passwords match, providing a clear and simple interface.
-         *
-         * @param {string} password1 - The first password for comparison.
-         * @param {string} password2 - The second password for comparison.
-         * @param {boolean} isHashed - A flag indicating whether the passwords are hashed.
-         *                             If true, uses bcrypt.compare for comparison; otherwise, compares plaintext.
-         * @returns {boolean} - Returns true if passwords match, false otherwise or in case of an error.
-         */
-        async verifyPassword(password1, password2, isHashed = false) {
-            return await this._verifyPassword(password1, password2, isHashed);
-        }
-
-                /**
+        /**
          * getFormDetails
          *
          * This function retrieves data from the provided form element.
@@ -2074,7 +2059,7 @@ const bcrypt = require('bcryptjs');
          *
          * @param {HTMLElement} form - The HTML form element from which to extract data.
          * @returns {Object|boolean} - Returns an object containing form data if successful, or false if the form is not valid or no data is found.
-         */
+        */
         getFormDetails(form)
         {
             return this._getFormDetails(form);
@@ -2101,6 +2086,19 @@ const bcrypt = require('bcryptjs');
                 // Running in a non-browser environment (e.g., Node.js console)
                 console.log(`Redirecting to: ${url || 'current page'} (Delayed: ${delay} seconds)`);
             }
+        }
+
+         /**
+         * Asynchronously verifies if two passwords match, providing a clear and simple interface.
+         *
+         * @param {string} password1 - The first password for comparison.
+         * @param {string} password2 - The second password for comparison.
+         * @param {boolean} isHashed - A flag indicating whether the passwords are hashed.
+         *                             If true, uses bcrypt.compare for comparison; otherwise, compares plaintext.
+         * @returns {boolean} - Returns true if passwords match, false otherwise or in case of an error.
+         */
+        async verifyPassword(password1, password2, isHashed = false) {
+            return await this._verifyPassword(password1, password2, isHashed);
         }
 
 

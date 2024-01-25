@@ -2,17 +2,17 @@
   "name": "nfsfu234-form-validation",
   "author": "NFORSHIFU234 Dev || Shifu-Nfor Nyuiring-yoh Rhagninyui",
   "homepage": "https://nfsfu234-form-validation.netlify.app/",
-  "version": "2.4.2",
+  "version": "2.4.3",
   "config": {
     "version_short": "2.4"
   },
   "description": "NFSFU234 Form Validation is a lightweight and user-friendly JavaScript library designed for validating HTML form elements, with a special emphasis on textarea fields. It offers customizable validation messages, comprehensive support for required field checks, seamless inline error displays, and convenient modal error notifications.",
   "license": "MIT",
   "main": "dist\\js\\nfsfu234FormValidation.js",
-  "style" : "dist\\css\\nfsfu234FormValidation.css",
+  "style": "dist\\css\\nfsfu234FormValidation.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nforshifu234dev/nfsfu234-form-validation.git"
+    "url": "git+https://github.com/nforshifu234dev/nfsfu234-form-validation.git"
   },
   "bugs": {
     "url": "https://github.com/nforshifu234dev/nfsfu234-form-validation/issues"
@@ -31,19 +31,19 @@
       {
         "basePath": "dist",
         "files": [
-          "js/**/*.js",
-          "css/**/*.css",
-          "js/**/*.map", 
-          "css/**/*.map" 
+          "dist/js/**/*.js",
+          "dist/css/**/*.css",
+          "dist/js/**/*.map",
+          "dist/css/**/*.map"
         ]
       }
     ]
-  },  
+  },
   "files": [
-    "js/**/*.js",
-    "css/**/*.css",
-    "js/**/*.map", 
-    "css/**/*.map" 
+    "dist/js/**/*.js",
+    "dist/css/**/*.css",
+    "dist/js/**/*.map",
+    "dist/css/**/*.map"
   ],
   "jspm": {
     "registry": "npm",
