@@ -1,5 +1,23 @@
 # Changelog
 
+## [2.4.4] - 2024-03-01
+
+## IMPORTANT INFORMATION
+
+🚨 **Repository Transfer:** This repository has been moved from nforshifu234dev's personal account to the NFSFU234FormValidation organization. You can now access it under the NFSFU234FormValidation organization by clicking [here](https://github.com/NFSFU234FormValidation/).
+
+### Added
+- Added a new [`CODE_OF_CONDUCT`](CODE_OF_CONDUCT.md) file to promote a welcoming and inclusive community.
+
+### Updated
+- Modified the [`CONTRIBUTING.md`](CONTRIBUTING.md) file to provide updated guidelines for contributors.
+- Updated the [`LICENSE`](LICENSE) file to reflect the project's license.
+- Modified the [`Package Information`](package.json) file to ensure accurate information.
+
+### Removed
+- The `web` folder has been removed and transferred to its own repository. You can now find it in its dedicated repository [here](https://github.com/NFSFU234FormValidation/website/).
+
+
 ## [2.4.3] - 2024-01-25
 
 
