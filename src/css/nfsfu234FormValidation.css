@@ -70,7 +70,6 @@
     position: absolute;         /* Absolute positioning to place it correctly */
     top: 0;                     /* Position at the top of the container */
     width: 100%;                /* Take the full width of the container */
-    height: -moz-max-content;
     height: max-content;        /* Adjust height based on content inside */
   }
   
@@ -182,4 +181,3 @@
     height: 25px;               /* Set height of the SVG icon */
   }
   
-/*# sourceMappingURL=nfsfu234FormValidation.css.map */

@@ -26,7 +26,7 @@ Examples of unacceptable behavior include:
 
 ## Reporting Violations
 
-If you experience or witness any behavior that violates this code of conduct, please report it immediately to nf.validator234@gmail.com. All reports will be taken seriously and will be handled with discretion and confidentiality.
+If you experience or witness any behavior that violates this code of conduct, please report it immediately to nf.validator234@gmail.com or any of social media handles. All reports will be taken seriously and will be handled with discretion and confidentiality.
 
 ## Enforcement
 
@@ -38,7 +38,7 @@ This code of conduct is adapted from the [Contributor Covenant](https://www.cont
 
 ## Contact
 
-If you have any questions or concerns about this code of conduct, please contact nforshifu234.dev@gmail.com .
+If you have any questions or concerns about this code of conduct, please contact us through any of social media handles.
 
 ## Attribution
 
