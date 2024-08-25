@@ -1,0 +1,322 @@
+[
+    {
+      "name": "submit",
+      "call": "nfsfu234formvalidation.submit()",
+      "description": "Validates and submits a form.",
+      "browserSupported": true,
+      "consoleSupported": false,
+      "returnType": "boolean"
+    },
+    {
+      "name": "validate",
+      "call": "nfsfu234formvalidation.validate()",
+      "description": "Checks and validates all input elements (inputs, textareas, selects, checkboxes, etc.).",
+      "browserSupported": true,
+      "consoleSupported": false,
+      "returnType": "boolean"
+    },
+    {
+      "name": "ajax",
+      "call": "nfsfu234formvalidation.ajax(AJAXOptions)",
+      "description": "Makes an AJAX request using the provided options and returns a Promise with the server's response.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "Promise"
+    },
+    {
+      "name": "getAJAXResponse",
+      "call": "nfsfu234formvalidation.getAJAXResponse()",
+      "description": "Retrieves the stored AJAX response or returns false if no response is found.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "object | boolean"
+    },
+    {
+      "name": "getFormDetails",
+      "call": "nfsfu234formvalidation.getFormDetails(form)",
+      "description": "Retrieves details of the specified form.",
+      "browserSupported": true,
+      "consoleSupported": false,
+      "returnType": "object"
+    },
+    {
+      "name": "loading",
+      "call": "nfsfu234formvalidation.loading(message, submitBtn, form)",
+      "description": "Displays a loading message and optionally disables the submit button and form.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "void"
+    },
+    {
+      "name": "displayError",
+      "call": "nfsfu234formvalidation.displayError(details)",
+      "description": "Displays an error message based on the provided details.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "void"
+    },
+    {
+      "name": "isEmail",
+      "call": "nfsfu234formvalidation.isEmail(email)",
+      "description": "Validates if the provided string is a valid email address.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "boolean"
+    },
+    {
+      "name": "isURL",
+      "call": "nfsfu234formvalidation.isURL(url)",
+      "description": "Validates if the provided string is a valid URL.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "boolean"
+    },
+    {
+      "name": "isNumber",
+      "call": "nfsfu234formvalidation.isNumber(number)",
+      "description": "Validates if the provided string or number is a valid number.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "boolean"
+    },
+    {
+      "name": "isZipCode",
+      "call": "nfsfu234formvalidation.isZipCode(zipCode)",
+      "description": "Validates if the provided string or number is a valid ZIP code.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "boolean"
+    },
+    {
+      "name": "isZip",
+      "call": "nfsfu234formvalidation.isZip(zipCode)",
+      "description": "An alias for isZipCode() method.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "boolean"
+    },
+    {
+      "name": "countString",
+      "call": "nfsfu234formvalidation.countString(string)",
+      "description": "Counts the number of characters in a string.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "number"
+    },
+    {
+      "name": "generatePassword",
+      "call": "nfsfu234formvalidation.generatePassword(length, shouldHash)",
+      "description": "Generates a random password with the specified length, optionally hashing it.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "string"
+    },
+    {
+      "name": "generateRandomPassword",
+      "call": "nfsfu234formvalidation.generateRandomPassword(length, shouldHash)",
+      "description": "Generates a random password and optionally hashes it.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "string"
+    },
+    {
+      "name": "passwordStrength",
+      "call": "nfsfu234formvalidation.passwordStrength()",
+      "description": "Evaluates the strength of the current password.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "number"
+    },
+    {
+      "name": "getPasswordStrength",
+      "call": "nfsfu234formvalidation.getPasswordStrength()",
+      "description": "Returns the evaluated strength of the current password.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "number"
+    },
+    {
+      "name": "checkPassword",
+      "call": "nfsfu234formvalidation.checkPassword(password, minLength, maxLength, includeSymbolsCheck, userSymbolRegex)",
+      "description": "Checks if a password meets specified criteria.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "boolean"
+    },
+    {
+      "name": "verifyPassword",
+      "call": "nfsfu234formvalidation.verifyPassword(stringPassword, hashedPassword, isHashed)",
+      "description": "Verifies a password against a hashed version.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "boolean"
+    },
+    {
+      "name": "passwordMatch",
+      "call": "nfsfu234formvalidation.passwordMatch(stringPassword, hashedPassword, isHashed)",
+      "description": "Checks if the provided password matches the hashed password.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "boolean"
+    },
+    {
+      "name": "hashPassword",
+      "call": "nfsfu234formvalidation.hashPassword(password)",
+      "description": "Hashes the provided password and returns the hashed string or false if hashing fails.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "string | boolean"
+    },
+    {
+      "name": "togglePasswordVisibility",
+      "call": "nfsfu234formvalidation.togglePasswordVisibility(input, showIcon, hideIcon)",
+      "description": "Toggles the visibility of a password input field, optionally showing or hiding icons.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "void"
+    },
+    {
+      "name": "togglePasswordVisibilityAll",
+      "call": "nfsfu234formvalidation.togglePasswordVisibilityAll(icons, uform, toggleAll)",
+      "description": "Toggles password visibility for all password fields in a form.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "void"
+    },
+    {
+      "name": "validateInput",
+      "call": "nfsfu234formvalidation.validateInput(inputField, options, callback)",
+      "description": "Validates a single input field with optional custom options and a callback function.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "boolean"
+    },
+    {
+      "name": "validateAllInput",
+      "call": "nfsfu234formvalidation.validateAllInput(form, customErrorMessages)",
+      "description": "Validates all input fields in the specified form using custom error messages.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "boolean"
+    },
+    {
+      "name": "validateRadio",
+      "call": "nfsfu234formvalidation.validateRadio(radioInputField, customErrorMessage)",
+      "description": "Validates a single radio input field with an optional custom error message.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "boolean"
+    },
+    {
+      "name": "validateAllRadio",
+      "call": "nfsfu234formvalidation.validateAllRadio(form, customErrorMessage)",
+      "description": "Validates all radio input fields in a form with an optional custom error message.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "boolean"
+    },
+    {
+      "name": "validateCheckbox",
+      "call": "nfsfu234formvalidation.validateCheckbox(checkboxInputField, options)",
+      "description": "Validates a single checkbox input field with optional custom options.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "boolean"
+    },
+    {
+      "name": "validateAllCheckbox",
+      "call": "nfsfu234formvalidation.validateAllCheckbox(form, options)",
+      "description": "Validates all checkbox input fields in a form with optional custom options.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "boolean"
+    },
+    {
+      "name": "validateSelect",
+      "call": "nfsfu234formvalidation.validateSelect(selectField, options)",
+      "description": "Validates a single select field with optional custom options.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "boolean"
+    },
+    {
+      "name": "validateAllSelect",
+      "call": "nfsfu234formvalidation.validateAllSelect(form, options)",
+      "description": "Validates all select fields in a form with optional custom options.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "boolean"
+    },
+    {
+      "name": "validateTextarea",
+      "call": "nfsfu234formvalidation.validateTextarea(textareaField, options)",
+      "description": "Validates a single textarea field with optional custom options.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "boolean"
+    },
+    {
+      "name": "validateAllTextarea",
+      "call": "nfsfu234formvalidation.validateAllTextarea(form, options)",
+      "description": "Validates all textarea fields in a form with optional custom options.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "boolean"
+    },
+    {
+      "name": "restrictInputWithCounter",
+      "call": "nfsfu234formvalidation.restrictInputWithCounter(inputElement, counterContainer, options)",
+      "description": "Restricts input in a field and updates a counter based on specified options.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "void"
+    },
+    {
+      "name": "containsOnlyIntegers",
+      "call": "nfsfu234formvalidation.containsOnlyIntegers(str)",
+      "description": "Checks if a string contains only integer numbers.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "boolean"
+    },
+    {
+      "name": "getPageURL",
+      "call": "nfsfu234formvalidation.getPageURL()",
+      "description": "Returns the current page URL.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "string"
+    },
+    {
+      "name": "redirect",
+      "call": "nfsfu234formvalidation.redirect(url, delay)",
+      "description": "Redirects to the specified URL after an optional delay.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "void"
+    },
+    {
+      "name": "checkVariableType",
+      "call": "nfsfu234formvalidation.checkVariableType(variable)",
+      "description": "Checks and returns the type of a variable.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "string"
+    },
+    {
+      "name": "isOnline",
+      "call": "nfsfu234formvalidation.isOnline()",
+      "description": "Checks if the user is online.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "boolean"
+    },
+    {
+      "name": "reset",
+      "call": "nfsfu234formvalidation.reset(form)",
+      "description": "Resets the specified form.",
+      "browserSupported": true,
+      "consoleSupported": true,
+      "returnType": "boolean"
+    }
+  ]

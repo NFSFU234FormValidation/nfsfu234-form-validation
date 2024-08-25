@@ -1,5 +1,29 @@
 # Changelog
 
+All notable changes to the NFSFU234FormValidation Library will be documented in this file. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and adheres to Semantic Versioning.
+
+## [3.0.0-beta] - 2024-08-25
+
+### Important Notes
+
+- 🚨 **Repository Transfer:** This repository has been moved from nforshifu234dev's personal account to the NFSFU234FormValidation organization. Access it under the NFSFU234FormValidation organization by clicking [here](https://github.com/NFSFU234FormValidation/).
+
+### Added
+
+- **Framework Compatibility:** Added support for React JS and Vite, allowing seamless integration with these frameworks.
+- **TypeScript Upgrade:** The library has been upgraded from Vanilla JavaScript to TypeScript for enhanced code efficiency and debugging.
+- **Error Handling Enhancements:** Introduced the `ErrorMessage` and `ErrorHandler` interfaces for clearer error insights, allowing errors to be handled as HTML elements, text, or null.
+- **Revamped Methods:** Redesigned `submit` and `validate` methods to return a Promise resolving to an `ErrorMessageInterface`, providing detailed feedback on validation results.
+
+### Updated
+
+- **Class and ID Renaming:** Updated the `js-required` class to `nfsfu234-fv-required` and the `jsSubmit` ID to `nfsfu234-fv-form` to maintain a consistent naming convention.
+- **Website Improvements:** Ongoing work to enhance the website for a more user-friendly experience, with final changes expected by the stable release.
+
+### Removed
+
+- None
+
 ## [2.4.4] - 2024-03-01
 
 ## IMPORTANT INFORMATION

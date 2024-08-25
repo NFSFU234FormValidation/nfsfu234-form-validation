@@ -1,5 +1,3 @@
-![Banner](images/IMG-d09df89sdfc0879sf08.png)
-
 # Contributing to NFSFU234FormValidation Library
 
 Thank you for considering contributing to the NFSFU234FormValidation library! Contributions from the community help improve the library and make it even more valuable.
@@ -44,7 +42,7 @@ Thank you for considering contributing to the NFSFU234FormValidation library! Co
 
 ## Code Style
 
-Please follow the existing code style and conventions used in the library.
+Please follow the existing code style and conventions used in the library. If you must change the style, state it in your `FEATURE_REQUEST.MD`file
 
 ## Issues
 

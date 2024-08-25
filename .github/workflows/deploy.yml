@@ -1,0 +1,71 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'  # Triggers the workflow on tags that match the pattern 'v*.*.*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Uses the latest Ubuntu environment
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4  # Checks out the repository code
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3  # Sets up Node.js
+        with:
+          node-version: '20'  # Specifies the Node.js version
+
+      - name: Install dependencies
+        run: npm ci  # Installs npm dependencies
+
+      - name: Run build
+        run: npm run build  # Runs the build script
+
+  publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4  # Checks out the repository code
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          registry-url: https://registry.npmjs.org/
+
+      - name: Install dependencies
+        run: npm ci  # Installs npm dependencies
+
+      - name: Publish to npm
+        run: npm publish  # Publishes the package to npm
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}  # Uses the npm token from secrets
+
+  release:
+    needs: publish-npm
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Ensure the workflow has write permissions to contents
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4  # Checks out the repository code
+
+      - name: Extract changelog for release
+        id: changelog
+        run: |
+          VERSION=$(echo "${GITHUB_REF#refs/tags/}")
+          CHANGELOG=$(sed -n "/## \[${VERSION}\]/,/^## \[/p" CHANGELOG.md | sed '$d')
+          echo "${CHANGELOG}" > changelog.txt
+
+      - name: Create GitHub Release
+        uses: actions/create-release@v1  # Creates a GitHub release
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body_path: changelog.txt
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Uses the default GitHub token from secrets
