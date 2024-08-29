@@ -45,7 +45,7 @@
     }
   },
   "scripts": {
-    "clean": "rimraf dist",
+    "clean": "npx rimraf dist",
     "build:js": "tsup",
     "build:css": "node build-css.cjs",
     "build:umd": "node build-umd.js",
