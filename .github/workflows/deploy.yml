@@ -21,6 +21,9 @@ jobs:
       - name: Install dependencies
         run: npm ci  # Installs npm dependencies
 
+      - name: List installed modules (Optional Debug Step)
+        run: ls -la node_modules/.bin
+
       - name: Run build
         run: npm run build  # Runs the build script
 
